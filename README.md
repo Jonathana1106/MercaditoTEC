@@ -1,0 +1,2 @@
+# MercaditoTEC
+MercaditoTEC es un proyecto de la universidad XTEC dirigido a los estudiantes. Este proyecto forma parte del programa Innovación Estudiantil que tiene como objetivo implementar ideas innovadoras para mejorar el bienestar de la comunidad estudiantil de XTEC. MercaditoTEC busca atender diferentes situaciones a las que se han estado enfrentando los estudiantes de XTEC debido al COVID-19.
