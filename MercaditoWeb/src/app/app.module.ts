@@ -8,12 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FirebaseService  } from './services/firebase.service';
 import { HomeComponent } from './Components/home/home.component';
+import { SignUpComponent } from './Components/Authentication/sign-up/sign-up.component';
+import { NavComponent } from './Components/sharedComponents/nav/nav.component';
+import { SignInComponent } from './Components/Authentication/sign-in/sign-in.component';
+import { StudentFormComponent } from './Components/Authentication/sign-in/student-form/student-form.component';
+import { EmployerFormComponent } from './Components/Authentication/sign-in/employer-form/employer-form.component';
+import { AdminFormComponent } from './Components/Authentication/sign-in/admin-form/admin-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-
+    SignUpComponent,
+    NavComponent,
+    SignInComponent,
+    StudentFormComponent,
+    EmployerFormComponent,
+    AdminFormComponent,
   ],
   imports: [
     BrowserModule,
