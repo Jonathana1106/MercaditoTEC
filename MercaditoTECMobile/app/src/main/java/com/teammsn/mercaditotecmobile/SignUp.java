@@ -18,6 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUp extends AppCompatActivity {
 
+    /**
+     * Se crean las variables globales de la clase.
+     */
+
     EditText name, lastname, phone, carnet, email, password;
     Button signin, signup;
     FirebaseAuth firebaseAuth;
@@ -26,6 +30,10 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        /**
+         * Se inicializan las variables con los valores correspondientes a su ID en la vista.
+         */
 
         name = (EditText) findViewById(R.id.name);
         lastname = (EditText) findViewById(R.id.lastname);
@@ -36,19 +44,26 @@ public class SignUp extends AppCompatActivity {
         signin = (Button) findViewById(R.id.btnsignin);
         signup = (Button) findViewById(R.id.btnsignup);
 
+        // Se inicializa FireBase
         firebaseAuth = FirebaseAuth.getInstance();
 
+        // Se comprueba si existe un usuario que haya iniciado sesion.
         if(firebaseAuth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
 
-        signin.setOnClickListener(new View.OnClickListener() {
+        /**
+         * Se asigna funcionalidad al boton de crear cuenta.
+         */
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Variables del metodo.
                 String semail = email.getText().toString().trim();
                 String spassword = password.getText().toString().trim();
 
+                // Mensajes de error para el correo y la contraseña
                 if (TextUtils.isEmpty(semail)) {
                     email.setError("Es necesario que ingrese un correo.");
                     return;
@@ -63,6 +78,7 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
+                //Guardar los datos en FireBase o mostrar mensaje de error correspondiente
                 firebaseAuth.createUserWithEmailAndPassword(semail, spassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

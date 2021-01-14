@@ -10,6 +10,9 @@ import android.widget.EditText;
 
 public class LogIn extends AppCompatActivity {
 
+    /**
+     * Se crean las variables globales de la clase
+     */
     EditText email, password;
     Button signin, signup;
 
@@ -18,7 +21,9 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-
+        /**
+         * Se inicializan las variables globales de la clase y se ligan al ID de la vista
+         */
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         signin = (Button) findViewById(R.id.btnsignin);
