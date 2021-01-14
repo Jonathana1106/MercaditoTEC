@@ -7,17 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class LogIn extends AppCompatActivity {
 
-    EditText correoinstitucional, password;
+    EditText email, password;
     Button signin, signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_log_in);
 
-        correoinstitucional = (EditText) findViewById(R.id.correoinstitucional);
+
+        email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         signin = (Button) findViewById(R.id.btnsignin);
         signup = (Button) findViewById(R.id.btnsignup);

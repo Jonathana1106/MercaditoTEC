@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    tools:context=".MainActivity">
+    tools:context=".LogIn">
 
     <EditText
-        android:id="@+id/correoinstitucional"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Correo institucional"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:hint="Contraseña"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/correoinstitucional"/>
+        android:layout_below="@+id/email"/>
     <Button
         android:id="@+id/btnsignin"
         android:layout_width="match_parent"
