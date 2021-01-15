@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FirestoreService} from 'src/app/services/firestore.service';
-import { FirebaseService } from 'src/app/services/firebase.service';
-import { Estudiantes } from 'src/app/models/Estudiantes';
+import {FirestoreService} from 'src/app/services/auth/firestore.service';
+import { FirebaseService } from 'src/app/services/Auth/firebase.service';
+import { Estudiantes } from 'src/app/models/users/student';
 
 @Component({
   selector: 'app-nav',

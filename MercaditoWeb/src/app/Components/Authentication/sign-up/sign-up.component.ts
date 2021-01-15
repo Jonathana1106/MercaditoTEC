@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FirestoreService} from 'src/app/services/firestore.service';
-import { FirebaseService } from 'src/app/services/firebase.service';
-import { Estudiantes } from 'src/app/models/Estudiantes';
+import {FirestoreService} from 'src/app/services/auth/firestore.service';
+import { FirebaseService } from 'src/app/services/Auth/firebase.service';
+import { Estudiantes } from 'src/app/models/users/student';
 
-
+declare var $:any;
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -13,6 +13,10 @@ export class SignUpComponent implements OnInit {
 
   isSignedIn=false
   students:Estudiantes[];
+  userSignUpType:string;
+  admin:boolean;
+  employer:boolean;
+  student:boolean;
 
   constructor(public firebaseService : FirebaseService,
     public firestoreService : FirestoreService ){}
@@ -22,14 +26,6 @@ export class SignUpComponent implements OnInit {
         console.log(students);
         this.students=students;
     })
-
-/*     
-    $(document).ready(function () {
-      $("#SignUp").click(function () {
-        this.studentEmail = $("#email").val();
-        console.log(this.studentEmail);
-      });
-    }) */
 
 
     if(localStorage.getItem('user')!== null){
@@ -44,8 +40,22 @@ export class SignUpComponent implements OnInit {
   
     
   }
-  
- 
+
+checkStudent() {
+  this.student=!this.student;
+  this.employer=false;
+  this.admin=false;
+}
+checkEmployer() {
+  this.employer=!this.employer;
+  this.student=false;
+  this.admin=false;
+}
+checkAdmin() {
+   this.admin=!this.admin;
+   this.student=false;
+   this.employer=false;
+ }
 
   async onSignup(email:string,password:string){
     let validatingEmail=this.students.find(x =>  x.Correo === email)

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Estudiantes } from '../models/Estudiantes';
+import { Estudiantes } from 'src/app/models/users/student';
 import { AngularFirestore, AngularFirestoreCollection, 
   AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs/Observable';
