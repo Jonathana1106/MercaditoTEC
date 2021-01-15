@@ -2,6 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {FirestoreService} from 'src/app/services/auth/firestore.service';
 import { FirebaseService } from 'src/app/services/Auth/firebase.service';
 import { Estudiantes } from 'src/app/models/users/student';
+import {AdminFirebaseService} from 'src/app/services/auth/admin/admin-firebase.service';
+import {AdminFirestoreService} from 'src/app/services/auth/admin/admin-firestore.service';
+import {Admin} from 'src/app/models/users/admin';
+import {EmployerFirebaseService} from 'src/app/services/auth/employer/employer-firebase.service';
+import {EmployerFirestoreService} from 'src/app/services/auth/employer/employer-firestore.service';
+import {Employer} from 'src/app/models/users/employer';
+
+
+
 
 declare var $:any;
 @Component({
@@ -11,8 +20,11 @@ declare var $:any;
 })
 export class SignUpComponent implements OnInit {
 
-  isSignedIn=false
+  isSignedIn=false;
   students:Estudiantes[];
+  admins:Admin[];
+  employers:Employer[];
+
   userSignUpType:string;
   admin:boolean;
   employer:boolean;
@@ -22,12 +34,24 @@ export class SignUpComponent implements OnInit {
   cel:number;
 
   constructor(public firebaseService : FirebaseService,
-    public firestoreService : FirestoreService ){}
+    public firestoreService : FirestoreService, public adminFirebaseService:AdminFirebaseService,
+    public adminFirestoreService: AdminFirestoreService,public employerFirebaseService:EmployerFirebaseService,
+    public employerFirestoreService: EmployerFirestoreService ){}
   
   ngOnInit(){
     this.firestoreService.getStudents().subscribe(students=>{
         console.log(students);
         this.students=students;
+    })
+
+    this.adminFirestoreService.getAdmins().subscribe(admins=>{
+      console.log(admins);
+      this.admins=admins;
+    })
+
+    this.employerFirestoreService.getEmployers().subscribe(employers=>{
+      console.log(employers);
+      this.employers=employers;
     })
 
 
@@ -65,7 +89,6 @@ export class SignUpComponent implements OnInit {
     this.name= ((<HTMLInputElement>document.getElementById("name")).value);
     this.lastName=((<HTMLInputElement>document.getElementById("lastName")).value);
     this.cel=parseFloat((<HTMLInputElement>document.getElementById("phone")).value);
-    alert(this.cel)
   }
 
   createStudent(){
@@ -88,8 +111,9 @@ export class SignUpComponent implements OnInit {
     //Call service method
   }
 
+  //Auth del estudiante
   async onSignup(email:string,password:string){
-    let validatingEmail=this.students.find(x =>  x.Correo === email)
+    let validatingEmail=this.students.find(x =>  x.correo === email)
     if(validatingEmail!==undefined){
       await this.firebaseService.signup(email,password)
       if(this.firebaseService.isLoggedIn )
@@ -99,11 +123,32 @@ export class SignUpComponent implements OnInit {
     alert("no existe su correo")
   }
 
-  async onSignin(email:string,password:string){
-    await this.firebaseService.signin(email,password)
-    if(this.firebaseService.isLoggedIn)
-    this.isSignedIn=true
+
+  //Auth del admin
+  async adminOnSignup(email:string,password:string){
+    let validatingEmail=this.admins.find(x =>  x.correo === email)
+    if(validatingEmail!==undefined){
+      await this.adminFirebaseService.adminSignup(email,password)
+      if(this.adminFirebaseService.isLoggedIn )
+      this.isSignedIn=true
+    }
+    else
+    alert("no existe su correo")
   }
+
+
+  //Auth del empleador
+  async employerOnSignup(email:string,password:string){
+    let validatingEmail=this.employers.find(x =>  x.correo === email)
+    if(validatingEmail!==undefined){
+      await this.employerFirebaseService.employerSignup(email,password)
+      if(this.employerFirebaseService.isLoggedIn )
+      this.isSignedIn=true
+    }
+    else
+    alert("no existe su correo")
+  }
+
 
   handleLogout(){
     this.isSignedIn=false

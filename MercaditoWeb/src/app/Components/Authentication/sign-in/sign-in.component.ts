@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {FirestoreService} from 'src/app/services/auth/firestore.service';
 import { FirebaseService } from 'src/app/services/Auth/firebase.service';
 import { Estudiantes } from 'src/app/models/users/student';
+import {AdminFirebaseService} from 'src/app/services/auth/admin/admin-firebase.service';
+import {AdminFirestoreService} from 'src/app/services/auth/admin/admin-firestore.service';
+import {Admin} from 'src/app/models/users/admin';
+import {EmployerFirebaseService} from 'src/app/services/auth/employer/employer-firebase.service';
+import {EmployerFirestoreService} from 'src/app/services/auth/employer/employer-firestore.service';
+import {Employer} from 'src/app/models/users/employer';
+
 declare var $:any;
 @Component({
   selector: 'app-sign-in',
@@ -16,13 +22,10 @@ export class SignInComponent implements OnInit {
 
 
   constructor(public firebaseService : FirebaseService,
-    public firestoreService : FirestoreService ){}
+    ){}
   
   ngOnInit(){
-    this.firestoreService.getStudents().subscribe(students=>{
-        console.log(students);
-        this.students=students;
-    })
+
 
     if(localStorage.getItem('user')!== null){
     this.isSignedIn=true

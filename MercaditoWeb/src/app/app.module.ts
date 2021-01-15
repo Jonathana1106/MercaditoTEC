@@ -7,6 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
  
 import { AppComponent } from './app.component';
 import {FirebaseService  } from './services/Auth/firebase.service';
+import {FirestoreService} from './services/auth/firestore.service';
+import {AdminFirebaseService } from './services/auth/admin/admin-firebase.service';
+import {AdminFirestoreService } from './services/auth/admin/admin-firestore.service';
+import {EmployerFirebaseService } from './services/auth/employer/employer-firebase.service';
+import {EmployerFirestoreService } from './services/auth/employer/employer-firestore.service';
 import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/Authentication/sign-up/sign-up.component';
 import { NavComponent } from './Components/sharedComponents/nav/nav.component';
@@ -35,7 +40,7 @@ import { SignInComponent } from './Components/Authentication/sign-in/sign-in.com
     }),
     AngularFirestoreModule
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, FirestoreService,AdminFirebaseService,AdminFirestoreService,EmployerFirebaseService,EmployerFirestoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
