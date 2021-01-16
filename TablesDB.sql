@@ -12,7 +12,7 @@ USE MercaditoTEC
 CREATE TABLE Administrador(
 	Nombre varchar(30) NOT NULL,
 	Telefono int NOT NULL,
-	Cédula varchar(30) NOT NULL PRIMARY KEY,
+	Cedula varchar(30) NOT NULL PRIMARY KEY,
 	Correo varchar(30) NOT NULL,
 	Apellidos varchar(30) NOT NULL
 );
