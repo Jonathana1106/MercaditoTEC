@@ -20,21 +20,33 @@ public class SignUp extends AppCompatActivity {
 
     /**
      * Se crean las variables globales de la clase.
+     *
+     * @param name:
+     * @param lastname:
+     * @param phone:
+     * @param carnet:
+     * @param email:
+     * @param password:
+     * @param signin:
+     * @param signup:
+     * @param firebaseAuth:
      */
 
     EditText name, lastname, phone, carnet, email, password;
     Button signin, signup;
     FirebaseAuth firebaseAuth;
 
+    /**
+     * Metodo que se encarga de inicializar la actividad de la vista.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        /**
-         * Se inicializan las variables con los valores correspondientes a su ID en la vista.
-         */
-
+        //Se inicializan las variables con los valores correspondientes a su ID en la vista.
         name = (EditText) findViewById(R.id.name);
         lastname = (EditText) findViewById(R.id.lastname);
         phone = (EditText) findViewById(R.id.phone);
@@ -48,22 +60,27 @@ public class SignUp extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         // Se comprueba si existe un usuario que haya iniciado sesion.
-        if(firebaseAuth.getCurrentUser() != null) {
+        if (firebaseAuth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
 
-        /**
-         * Se asigna funcionalidad al boton de crear cuenta.
-         */
+        // Se asigna funcionalidad al boton de crear cuenta.
         signup.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Metodo que se activa da dar click sobre este y que se encarga de verificar si la
+             * informacion ingresasda es correcta o no, ademas de mostrar los mensajes de error
+             * en cada caso.
+             * @param v:
+             */
             @Override
             public void onClick(View v) {
                 // Variables del metodo.
                 String semail = email.getText().toString().trim();
                 String spassword = password.getText().toString().trim();
 
-                // Mensajes de error para el correo y la contraseña
+                // Mensajes de error para el correo y la contraseña.
                 if (TextUtils.isEmpty(semail)) {
                     email.setError("Es necesario que ingrese un correo.");
                     return;
@@ -78,15 +95,14 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                //Guardar los datos en FireBase o mostrar mensaje de error correspondiente
+                // Guarda los datos en FireBase o mostrar mensaje de error correspondiente.
                 firebaseAuth.createUserWithEmailAndPassword(semail, spassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()) {
+                        if (task.isSuccessful()) {
                             Toast.makeText(SignUp.this, "Usuario registrado", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        }
-                        else {
+                        } else {
                             Toast.makeText(SignUp.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -94,6 +110,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+        // Se asigna funcionalidad al boton de ingresar.
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
