@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Correo institucional"
+        android:textColorHint="#107869"
         android:textAlignment="center"
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal" />
@@ -21,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
+        android:textColorHint="#107869"
         android:textAlignment="center"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/email"
@@ -41,7 +43,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:text="Crear una cuenta"
-        android:textColor="#5CD85A"
+        android:textColor="#1A5653"
         style="@style/TextAppearance.AppCompat.Large"
         android:layout_below="@+id/btnsignin"/>
 
