@@ -39,7 +39,7 @@ public class LogIn extends AppCompatActivity {
         signin = (Button) findViewById(R.id.btnsignin);
         signup = (TextView) findViewById(R.id.btnsignup);
 
-        //
+        // Se asigna la funcionalidad del boton iniciar sesion.
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
