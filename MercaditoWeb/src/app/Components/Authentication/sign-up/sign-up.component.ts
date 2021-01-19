@@ -93,6 +93,7 @@ export class SignUpComponent implements OnInit {
 
   createStudent(){
     var email= ((<HTMLInputElement>document.getElementById("studentEmail")).value);
+    var studentCard= ((<HTMLInputElement>document.getElementById("studentCard")).value);
     //Call service method
   }
 

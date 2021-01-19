@@ -3,4 +3,5 @@ export interface Estudiantes{
     nombre:string;
     apellidos:string;
     celular:number;
+    carnet:number;
 }

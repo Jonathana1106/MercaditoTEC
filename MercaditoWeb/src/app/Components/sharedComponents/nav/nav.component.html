@@ -11,13 +11,36 @@
           </li>
           <li class="nav-item">
             <a class="nav-link"  *ngIf="!isSignedIn" routerLink="/signUp">Sign Up</a>
-      </li>
+          </li>
           <li class="nav-item">
             <a class="nav-link" *ngIf="!isSignedIn" routerLink="/signIn">Sign In</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+
+          <!-- Employer -->
+          <div *ngIf="userType=='Employer'">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Empleador</a>
+            </li>
+          </div>
+
+
+
+          <!-- Student -->
+          <div *ngIf="userType=='Student'">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Estudiante</a>
+            </li>
+          </div>
+
+
+          
+
+          <!-- Admin -->
+          <div *ngIf="userType=='Admin'">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+            </li>
+          </div>
         </ul>
       </div>
     </div>

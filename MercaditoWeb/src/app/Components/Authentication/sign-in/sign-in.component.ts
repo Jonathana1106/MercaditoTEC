@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { FirebaseService } from 'src/app/services/Auth/firebase.service';
 import { Estudiantes } from 'src/app/models/users/student';
 import {AdminFirebaseService} from 'src/app/services/auth/admin/admin-firebase.service';
@@ -7,6 +7,7 @@ import {Admin} from 'src/app/models/users/admin';
 import {EmployerFirebaseService} from 'src/app/services/auth/employer/employer-firebase.service';
 import {EmployerFirestoreService} from 'src/app/services/auth/employer/employer-firestore.service';
 import {Employer} from 'src/app/models/users/employer';
+import {CurrentUserService} from 'src/app/services/auth/currentUser/current-user.service';
 
 declare var $:any;
 @Component({
@@ -19,13 +20,18 @@ export class SignInComponent implements OnInit {
   isSignedIn=false
   students:Estudiantes[];
   userType:string;
+  admin:boolean;
+  employer:boolean;
+  student:boolean;
+  
+  @Output() messageEvent=new EventEmitter<boolean>();
 
-
-  constructor(public firebaseService : FirebaseService,
-    ){}
+  constructor(public firebaseService : FirebaseService, public userService: CurrentUserService){}
   
   ngOnInit(){
+    
 
+    this.userService.currentUser.subscribe(userType => this.userType = userType )
 
     if(localStorage.getItem('user')!== null){
     this.isSignedIn=true
@@ -36,13 +42,35 @@ export class SignInComponent implements OnInit {
       console.log(this.isSignedIn);
     }
 
-    $(document).ready(function(){
-      $("#signIn").click(function(){
-        this.userType = $("input[type='radio']:checked").val();
-        alert(this.userType);
-      });
-    });
     
+
+    
+  }
+
+  studentLogged() {
+    this.student=!this.student;
+    this.employer=false;
+    this.admin=false;
+  }
+  employerLogged() {
+    this.employer=!this.employer;
+    this.student=false;
+    this.admin=false;
+  }
+
+  adminLogged() {
+    this.admin=!this.admin;
+    this.student=false;
+    this.employer=false;
+  }
+
+  sendMessage(){
+    if(this.admin)
+    this.userService.changeMessage("Admin")
+    if(this.employer)
+    this.userService.changeMessage("Employer")
+    if(this.student)
+    this.userService.changeMessage("Student")
   }
   
 
