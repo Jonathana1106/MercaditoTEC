@@ -1,17 +1,24 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject'
-
+import { Subject } from 'rxjs';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 @Injectable({
   providedIn: 'root'
 })
 export class CurrentUserService {
 
-  private userSource = new BehaviorSubject<string>("No user");
-  currentUser=this.userSource.asObservable();
-
+  
   constructor() { }
 
-  changeMessage(userType:string){
-    this.userSource.next(userType);
-  }
+  userType = new BehaviorSubject(this.user);
+
+ set user(value:string) {
+   this.userType.next(value); // this will make sure to tell every subscriber about the change.
+   localStorage.setItem('userType', value);
+ }
+
+ get user() {
+   return localStorage.getItem('userType');
+ }
+
+
 }

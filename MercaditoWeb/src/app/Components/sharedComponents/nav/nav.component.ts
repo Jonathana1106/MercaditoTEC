@@ -14,17 +14,18 @@ export class NavComponent implements OnInit{
 
   isSignedIn=false
   students:Estudiantes[];
-  adminNav="hola";
-  studentNav:boolean;
-  employerNav:boolean;
-  userType:string;
+  userLogged:string;
 
 
   constructor(public firebaseService : FirebaseService,
-    public firestoreService : FirestoreService, public userService: CurrentUserService ){}
+    public firestoreService : FirestoreService, public userService: CurrentUserService ){
+      userService.userType.subscribe((nextValue) => {
+        this.userLogged=nextValue;
+        alert(nextValue);  // this will happen on every change
+     })
+    }
   
   ngOnInit(){
-    this.userService.currentUser.subscribe(userType => this.userType = userType )
 
     this.firestoreService.getStudents().subscribe(students=>{
         console.log(students);

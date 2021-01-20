@@ -31,8 +31,6 @@ export class SignInComponent implements OnInit {
   ngOnInit(){
     
 
-    this.userService.currentUser.subscribe(userType => this.userType = userType )
-
     if(localStorage.getItem('user')!== null){
     this.isSignedIn=true
     console.log(this.isSignedIn);}
@@ -66,11 +64,11 @@ export class SignInComponent implements OnInit {
 
   sendMessage(){
     if(this.admin)
-    this.userService.changeMessage("Admin")
+    this.userService.user = 'Admin';
     if(this.employer)
-    this.userService.changeMessage("Employer")
+    this.userService.user = 'Employer';
     if(this.student)
-    this.userService.changeMessage("Student")
+    this.userService.user = 'Student';
   }
   
 
