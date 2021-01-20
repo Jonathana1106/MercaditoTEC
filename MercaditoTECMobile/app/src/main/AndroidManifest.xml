@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MercaditoTECMobile">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.teammsn.services.MyServices"></activity>
+        <activity android:name="com.teammsn.products.MyProducts" />
+        <activity android:name="com.teammsn.services.Services" />
+        <activity android:name="com.teammsn.products.Products" />
+        <activity android:name="com.teammsn.me.Profile" />
+        <activity android:name="com.teammsn.me.Chats" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".LogIn">
             <intent-filter>

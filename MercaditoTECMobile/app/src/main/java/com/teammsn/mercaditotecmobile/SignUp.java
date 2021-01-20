@@ -118,7 +118,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        // Se asigna la funcionalidad al icono
+        // Se asigna la funcionalidad al icono.
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,7 +126,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        // Se asigna la funcionalidad al icono de informacion de la contrasena
+        // Se asigna la funcionalidad al icono de informacion de la contrasena.
         passicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

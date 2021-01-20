@@ -1,34 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include layout="@layout/toolbar_home" />
+
     <TextView
-        android:id="@+id/welcomemsg"
+        android:id="@+id/productos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a MercaditoTEC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:text="Productos"
+        android:textColor="@color/green0"
+        android:textSize="30dp" />
 
-    <Button
-        android:id="@+id/logout"
+    <TextView
+        android:id="@+id/servicios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginRight="130dp"
-        android:onClick="logout"
-        android:text="Cerrar Sesión"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomemsg" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="50dp"
+        android:text="Servicios"
+        android:textColor="@color/green0"
+        android:textSize="30dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/bpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productos"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="20dp"
+        android:text="Comprar"
+        android:textColor="@color/green0"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/bproducts"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/productos"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/sproducts" />
+
+    <TextView
+        android:id="@+id/spt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bproducts"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="20dp"
+        android:text="Vender"
+        android:textColor="@color/green0"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/sproducts"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/bproducts"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/bproducts" />
+
+    <TextView
+        android:id="@+id/bst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productos"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="78dp"
+        android:text="Comprar"
+        android:textColor="@color/green0"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/bservices"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/servicios"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="80dp"
+        android:src="@drawable/bservices" />
+
+    <TextView
+        android:id="@+id/sst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bservices"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="88dp"
+        android:text="Vender"
+        android:textColor="@color/green0"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/sservices"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/bservices"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="80dp"
+        android:src="@drawable/sservices" />
+
+</RelativeLayout>
