@@ -1,7 +1,9 @@
 export interface Estudiantes{
-    correo?:string;
-    nombre:string;
-    apellidos:string;
-    celular:number;
-    carnet:number;
+    Correo?:string;
+    Nombre:string;
+    Apellidos:string;
+    Telefono:number;
+    Carnet:number;
+    Puntos:number;
+    FechaActividad:string;
 }

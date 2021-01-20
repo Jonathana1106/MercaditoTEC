@@ -8,6 +8,7 @@ import {Admin} from 'src/app/models/users/admin';
 import {EmployerFirebaseService} from 'src/app/services/auth/employer/employer-firebase.service';
 import {EmployerFirestoreService} from 'src/app/services/auth/employer/employer-firestore.service';
 import {Employer} from 'src/app/models/users/employer';
+import { StudentService } from 'src/app/services/users/student.service';
 
 
 
@@ -36,7 +37,7 @@ export class SignUpComponent implements OnInit {
   constructor(public firebaseService : FirebaseService,
     public firestoreService : FirestoreService, public adminFirebaseService:AdminFirebaseService,
     public adminFirestoreService: AdminFirestoreService,public employerFirebaseService:EmployerFirebaseService,
-    public employerFirestoreService: EmployerFirestoreService ){}
+    public employerFirestoreService: EmployerFirestoreService, public studentService:StudentService ){}
   
   ngOnInit(){
     this.firestoreService.getStudents().subscribe(students=>{
@@ -93,8 +94,10 @@ export class SignUpComponent implements OnInit {
 
   createStudent(){
     var email= ((<HTMLInputElement>document.getElementById("studentEmail")).value);
-    var studentCard= ((<HTMLInputElement>document.getElementById("studentCard")).value);
-    //Call service method
+    var studentCard= parseFloat((<HTMLInputElement>document.getElementById("studentCard")).value);
+    alert("student card:"+ studentCard+" name:"+this.name+" last:"+ this.lastName + " cel:"+ this.cel+ " email:"+email);
+    this.studentService.sendData(studentCard,this.name,this.lastName,0,this.cel,'',email); 
+    /* this.studentService.sendData(2018183396,"Pablo","this.lastName",0,60184140,'',"lpablouc"); */
   }
 
   createAdmin(){
@@ -109,16 +112,17 @@ export class SignUpComponent implements OnInit {
     var company= ((<HTMLInputElement>document.getElementById("company")).value);
     var companyEmail=((<HTMLInputElement>document.getElementById("companyEmail")).value);
     var companyNumber= parseFloat((<HTMLInputElement>document.getElementById("companyNumber")).value);
-    //Call service method
+    
   }
 
   //Auth del estudiante
   async onSignup(email:string,password:string){
-    let validatingEmail=this.students.find(x =>  x.correo === email)
+    let validatingEmail=this.students.find(x =>  x.Correo === email)
     if(validatingEmail!==undefined){
       await this.firebaseService.signup(email,password)
       if(this.firebaseService.isLoggedIn )
-      this.isSignedIn=true
+      this.isSignedIn=true;
+      this.createStudent();
     }
     else
     alert("no existe su correo")

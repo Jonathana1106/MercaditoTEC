@@ -51,7 +51,7 @@ export class NavComponent implements OnInit{
  
 
   async onSignup(email:string,password:string){
-    let validatingEmail=this.students.find(x =>  x.correo === email)
+    let validatingEmail=this.students.find(x =>  x.Correo === email)
     if(validatingEmail!==undefined){
       await this.firebaseService.signup(email,password)
       if(this.firebaseService.isLoggedIn )

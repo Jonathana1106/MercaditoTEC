@@ -1,6 +1,7 @@
 //Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import {AngularFireModule} from '@angular/fire'; 
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/Authentication/sign-up/sign-up.component';
 import { NavComponent } from './Components/sharedComponents/nav/nav.component';
 import { SignInComponent } from './Components/Authentication/sign-in/sign-in.component';
+import { StudentService } from 'src/app/services/users/student.service';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { SignInComponent } from './Components/Authentication/sign-in/sign-in.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyAPoboWgej6xEfOfonCOoY8w-BKzUWdlPM",
       authDomain: "datic-85b5f.firebaseapp.com",
@@ -40,7 +43,7 @@ import { SignInComponent } from './Components/Authentication/sign-in/sign-in.com
     }),
     AngularFirestoreModule
   ],
-  providers: [FirebaseService, FirestoreService,AdminFirebaseService,AdminFirestoreService,EmployerFirebaseService,EmployerFirestoreService],
+  providers: [FirebaseService, FirestoreService,AdminFirebaseService,AdminFirestoreService,EmployerFirebaseService,EmployerFirestoreService,StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
