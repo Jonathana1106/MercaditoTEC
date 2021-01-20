@@ -11,10 +11,8 @@ import {Employer} from 'src/app/models/users/employer';
 import { StudentService } from 'src/app/services/users/student.service';
 import { EmployerService } from 'src/app/services/users/employer.service';
 import { AdminService } from 'src/app/services/users/admin.service';
+import {CurrentUserService} from 'src/app/services/auth/currentUser/current-user.service';
 
-
-
-declare var $:any;
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -39,7 +37,7 @@ export class SignUpComponent implements OnInit {
     public firestoreService : FirestoreService, public adminFirebaseService:AdminFirebaseService,
     public adminFirestoreService: AdminFirestoreService,public employerFirebaseService:EmployerFirebaseService,
     public employerFirestoreService: EmployerFirestoreService, public studentService:StudentService,
-    public adminService:AdminService, public employerService:EmployerService){}
+    public adminService:AdminService, public employerService:EmployerService, public userService: CurrentUserService){}
   
   ngOnInit(){
     this.firestoreService.getStudents().subscribe(students=>{
@@ -87,6 +85,14 @@ export class SignUpComponent implements OnInit {
     this.student=false;
     this.employer=false;
   }
+  sendMessage(){
+    if(this.admin)
+    this.userService.user = 'Admin';
+    if(this.employer)
+    this.userService.user = 'Employer';
+    if(this.student)
+    this.userService.user = 'Student';
+  }
 
   getGeneralData(){
     this.name= ((<HTMLInputElement>document.getElementById("name")).value);
@@ -123,6 +129,7 @@ export class SignUpComponent implements OnInit {
       await this.firebaseService.signup(email,password)
       if(this.firebaseService.isLoggedIn )
       this.isSignedIn=true;
+      this.sendMessage();
       this.createStudent();
     }
     else
@@ -137,6 +144,7 @@ export class SignUpComponent implements OnInit {
       await this.adminFirebaseService.adminSignup(email,password)
       if(this.adminFirebaseService.isLoggedIn )
       this.isSignedIn=true;
+      this.sendMessage();
       this.createAdmin();
     }
     else
@@ -151,7 +159,7 @@ export class SignUpComponent implements OnInit {
       await this.employerFirebaseService.employerSignup(email,password)
       if(this.employerFirebaseService.isLoggedIn )
       this.isSignedIn=true;
-      alert("1 holaaa");
+      this.sendMessage();
       this.createEmployer();
     }
     else

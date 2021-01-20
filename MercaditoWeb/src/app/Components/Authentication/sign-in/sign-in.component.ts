@@ -1,12 +1,6 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { FirebaseService } from 'src/app/services/Auth/firebase.service';
 import { Estudiantes } from 'src/app/models/users/student';
-import {AdminFirebaseService} from 'src/app/services/auth/admin/admin-firebase.service';
-import {AdminFirestoreService} from 'src/app/services/auth/admin/admin-firestore.service';
-import {Admin} from 'src/app/models/users/admin';
-import {EmployerFirebaseService} from 'src/app/services/auth/employer/employer-firebase.service';
-import {EmployerFirestoreService} from 'src/app/services/auth/employer/employer-firestore.service';
-import {Employer} from 'src/app/models/users/employer';
 import {CurrentUserService} from 'src/app/services/auth/currentUser/current-user.service';
 
 declare var $:any;
@@ -24,8 +18,6 @@ export class SignInComponent implements OnInit {
   employer:boolean;
   student:boolean;
   
-  @Output() messageEvent=new EventEmitter<boolean>();
-
   constructor(public firebaseService : FirebaseService, public userService: CurrentUserService){}
   
   ngOnInit(){
