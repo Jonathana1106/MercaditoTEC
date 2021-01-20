@@ -6,15 +6,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.nio.file.Files;
 
 public class SignUp extends AppCompatActivity {
 
@@ -27,13 +33,16 @@ public class SignUp extends AppCompatActivity {
      * @param carnet:
      * @param email:
      * @param password:
-     * @param signin:
      * @param signup:
+     * @param passicon:
+     * @param backArrow:
      * @param firebaseAuth:
      */
 
     EditText name, lastname, phone, carnet, email, password;
-    Button signin, signup;
+    Button signup;
+    ImageView backArrow;
+    ImageButton passicon;
     FirebaseAuth firebaseAuth;
 
     /**
@@ -46,17 +55,16 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        //Se inicializan las variables con los valores correspondientes a su ID en la vista.
+        // Se inicializan las variables con los valores correspondientes a su ID en la vista.
         name = (EditText) findViewById(R.id.name);
         lastname = (EditText) findViewById(R.id.lastname);
         phone = (EditText) findViewById(R.id.phone);
         carnet = (EditText) findViewById(R.id.carnet);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
-        signin = (Button) findViewById(R.id.btnsignin);
         signup = (Button) findViewById(R.id.btnsignup);
-
-        // Se inicializa FireBase
+        backArrow = (ImageView) findViewById(R.id.backios);
+        passicon = (ImageButton) findViewById(R.id.passicon);
         firebaseAuth = FirebaseAuth.getInstance();
 
         // Se comprueba si existe un usuario que haya iniciado sesion.
@@ -110,13 +118,20 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        // Se asigna funcionalidad al boton de ingresar.
-        signin.setOnClickListener(new View.OnClickListener() {
+        // Se asigna la funcionalidad al icono
+        backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), LogIn.class));
             }
         });
 
+        // Se asigna la funcionalidad al icono de informacion de la contrasena
+        passicon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SignUp.this, "La contraseña debe ser la utilidaza en DATIC.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
