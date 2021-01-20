@@ -10,7 +10,7 @@ export class StudentService {
   students:Estudiantes[];
 
   constructor(private http: HttpClient) { }
-  getPacientes(): Observable<Estudiantes[]> {
+  getStudents(): Observable<Estudiantes[]> {
     return this.http.get<Estudiantes[]>('https://localhost:44391/estudiante');
 
   }
@@ -48,7 +48,7 @@ export class StudentService {
   }
 
 
-  modificar(id,carnet,nombre,apellidos,puntos,tel,fechaActividad,correo) {
+  modify(id,carnet,nombre,apellidos,puntos,tel,fechaActividad,correo) {
     return this.http.put('https://localhost:44391/estudiante/' + id, {Nombre: nombre, Apellidos: apellidos, Correo: correo,Puntos: puntos, Telefono: tel, Carnet: carnet,  
     FechaActividad: fechaActividad,
     }).subscribe(

@@ -18,6 +18,8 @@ import { SignUpComponent } from './Components/Authentication/sign-up/sign-up.com
 import { NavComponent } from './Components/sharedComponents/nav/nav.component';
 import { SignInComponent } from './Components/Authentication/sign-in/sign-in.component';
 import { StudentService } from 'src/app/services/users/student.service';
+import { AdminService } from 'src/app/services/users/admin.service';
+import { EmployerService } from 'src/app/services/users/employer.service';
 
 
 @NgModule({
@@ -43,7 +45,7 @@ import { StudentService } from 'src/app/services/users/student.service';
     }),
     AngularFirestoreModule
   ],
-  providers: [FirebaseService, FirestoreService,AdminFirebaseService,AdminFirestoreService,EmployerFirebaseService,EmployerFirestoreService,StudentService],
+  providers: [FirebaseService, FirestoreService,AdminFirebaseService,AdminService,EmployerService, AdminFirestoreService,EmployerFirebaseService,EmployerFirestoreService,StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

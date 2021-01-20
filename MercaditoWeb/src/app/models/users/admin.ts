@@ -1,7 +1,7 @@
 export class Admin {
-    nombre:string;
-    apellidos:string;
-    celular:number;
-    cedula:number;
-    correo?:string;
+    Nombre:string;
+    Apellidos:string;
+    Telefono:number;
+    Cedula:number;
+    Correo?:string;
 }

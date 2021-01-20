@@ -9,7 +9,8 @@ import {EmployerFirebaseService} from 'src/app/services/auth/employer/employer-f
 import {EmployerFirestoreService} from 'src/app/services/auth/employer/employer-firestore.service';
 import {Employer} from 'src/app/models/users/employer';
 import { StudentService } from 'src/app/services/users/student.service';
-
+import { EmployerService } from 'src/app/services/users/employer.service';
+import { AdminService } from 'src/app/services/users/admin.service';
 
 
 
@@ -37,7 +38,8 @@ export class SignUpComponent implements OnInit {
   constructor(public firebaseService : FirebaseService,
     public firestoreService : FirestoreService, public adminFirebaseService:AdminFirebaseService,
     public adminFirestoreService: AdminFirestoreService,public employerFirebaseService:EmployerFirebaseService,
-    public employerFirestoreService: EmployerFirestoreService, public studentService:StudentService ){}
+    public employerFirestoreService: EmployerFirestoreService, public studentService:StudentService,
+    public adminService:AdminService, public employerService:EmployerService){}
   
   ngOnInit(){
     this.firestoreService.getStudents().subscribe(students=>{
@@ -95,9 +97,7 @@ export class SignUpComponent implements OnInit {
   createStudent(){
     var email= ((<HTMLInputElement>document.getElementById("studentEmail")).value);
     var studentCard= parseFloat((<HTMLInputElement>document.getElementById("studentCard")).value);
-    alert("student card:"+ studentCard+" name:"+this.name+" last:"+ this.lastName + " cel:"+ this.cel+ " email:"+email);
     this.studentService.sendData(studentCard,this.name,this.lastName,0,this.cel,'',email); 
-    /* this.studentService.sendData(2018183396,"Pablo","this.lastName",0,60184140,'',"lpablouc"); */
   }
 
   createAdmin(){
@@ -112,7 +112,17 @@ export class SignUpComponent implements OnInit {
     var company= ((<HTMLInputElement>document.getElementById("company")).value);
     var companyEmail=((<HTMLInputElement>document.getElementById("companyEmail")).value);
     var companyNumber= parseFloat((<HTMLInputElement>document.getElementById("companyNumber")).value);
-    
+    console.log(companyNumber);
+    console.log(this.name);
+    console.log(this.lastName);
+    console.log(company);
+    console.log(this.cel);
+    console.log(id);
+    console.log(email);
+    console.log(companyEmail);
+    this.employerService.sendData(companyNumber,this.name,this.lastName,company,this.cel,id,email, companyEmail);
+ /* this.employerService.sendData(60184552,"this.name","this.lastName","company",6112345,1255485,"email", "companyEmail"); */
+
   }
 
   //Auth del estudiante
@@ -131,7 +141,7 @@ export class SignUpComponent implements OnInit {
 
   //Auth del admin
   async adminOnSignup(email:string,password:string){
-    let validatingEmail=this.admins.find(x =>  x.correo === email)
+    let validatingEmail=this.admins.find(x =>  x.Correo === email)
     if(validatingEmail!==undefined){
       await this.adminFirebaseService.adminSignup(email,password)
       if(this.adminFirebaseService.isLoggedIn )
@@ -144,11 +154,13 @@ export class SignUpComponent implements OnInit {
 
   //Auth del empleador
   async employerOnSignup(email:string,password:string){
-    let validatingEmail=this.employers.find(x =>  x.correo === email)
+    let validatingEmail=this.employers.find(x =>  x.Correo === email)
     if(validatingEmail!==undefined){
       await this.employerFirebaseService.employerSignup(email,password)
       if(this.employerFirebaseService.isLoggedIn )
-      this.isSignedIn=true
+      this.isSignedIn=true;
+      alert("1 holaaa");
+      this.createEmployer();
     }
     else
     alert("no existe su correo")
