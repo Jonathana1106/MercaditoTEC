@@ -102,8 +102,8 @@ export class SignUpComponent implements OnInit {
 
   createAdmin(){
     var email= ((<HTMLInputElement>document.getElementById("adminEmail")).value);
-    var id= parseFloat((<HTMLInputElement>document.getElementById("phone")).value);
-    //Call service method
+    var id= parseFloat((<HTMLInputElement>document.getElementById("adminId")).value);
+    this.adminService.sendData(id,this.name,this.lastName,this.cel,email);
   }
 
   createEmployer(){
@@ -112,16 +112,7 @@ export class SignUpComponent implements OnInit {
     var company= ((<HTMLInputElement>document.getElementById("company")).value);
     var companyEmail=((<HTMLInputElement>document.getElementById("companyEmail")).value);
     var companyNumber= parseFloat((<HTMLInputElement>document.getElementById("companyNumber")).value);
-    console.log(companyNumber);
-    console.log(this.name);
-    console.log(this.lastName);
-    console.log(company);
-    console.log(this.cel);
-    console.log(id);
-    console.log(email);
-    console.log(companyEmail);
     this.employerService.sendData(companyNumber,this.name,this.lastName,company,this.cel,id,email, companyEmail);
- /* this.employerService.sendData(60184552,"this.name","this.lastName","company",6112345,1255485,"email", "companyEmail"); */
 
   }
 
@@ -145,7 +136,8 @@ export class SignUpComponent implements OnInit {
     if(validatingEmail!==undefined){
       await this.adminFirebaseService.adminSignup(email,password)
       if(this.adminFirebaseService.isLoggedIn )
-      this.isSignedIn=true
+      this.isSignedIn=true;
+      this.createAdmin();
     }
     else
     alert("no existe su correo")
