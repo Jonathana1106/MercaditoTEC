@@ -10,10 +10,13 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  *ngIf="!isSignedIn" routerLink="/signUp">Sign Up</a>
+            <a class="nav-link active"  *ngIf="userLogged=='None'" routerLink="/signUp">Crear cuenta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" *ngIf="!isSignedIn" routerLink="/signIn">Sign In</a>
+            <a class="nav-link active" *ngIf="userLogged=='None'" routerLink="/signIn">Iniciar sesión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  (click)="logout()" *ngIf="userLogged!='None'" routerLink="/signIn">Cerrar sesión</a>
           </li>
 
           <!-- Employer -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter  } from '@angular/core';
 import {FirestoreService} from 'src/app/services/auth/firestore.service';
 import { FirebaseService } from 'src/app/services/Auth/firebase.service';
 import { Estudiantes } from 'src/app/models/users/student';
@@ -16,19 +16,17 @@ export class NavComponent implements OnInit{
   students:Estudiantes[];
   userLogged:string;
 
-
+  @Output() isLogout=new EventEmitter<void>()
   constructor(public firebaseService : FirebaseService,
     public firestoreService : FirestoreService, public userService: CurrentUserService ){
       userService.userType.subscribe((nextValue) => {
         this.userLogged=nextValue;
-        alert(nextValue);  // this will happen on every change
      })
     }
   
   ngOnInit(){
 
     this.firestoreService.getStudents().subscribe(students=>{
-        console.log(students);
         this.students=students;
     })
 
@@ -46,10 +44,6 @@ export class NavComponent implements OnInit{
     
   }
 
-
-
- 
-
   async onSignup(email:string,password:string){
     let validatingEmail=this.students.find(x =>  x.Correo === email)
     if(validatingEmail!==undefined){
@@ -65,6 +59,12 @@ export class NavComponent implements OnInit{
     await this.firebaseService.signin(email,password)
     if(this.firebaseService.isLoggedIn)
     this.isSignedIn=true
+  }
+
+  logout(){
+    this.firebaseService.logout()
+    this.userService.user = 'None';
+    this.isLogout.emit()
   }
 
   handleLogout(){

@@ -41,17 +41,14 @@ export class SignUpComponent implements OnInit {
   
   ngOnInit(){
     this.firestoreService.getStudents().subscribe(students=>{
-        console.log(students);
         this.students=students;
     })
 
     this.adminFirestoreService.getAdmins().subscribe(admins=>{
-      console.log(admins);
       this.admins=admins;
     })
 
     this.employerFirestoreService.getEmployers().subscribe(employers=>{
-      console.log(employers);
       this.employers=employers;
     })
 
