@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.teammsn.me.Chats">
 
+    <include layout="@layout/toolbar_general" />
 
     <TextView
         android:id="@+id/msg"

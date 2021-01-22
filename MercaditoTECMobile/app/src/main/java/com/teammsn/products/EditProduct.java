@@ -7,22 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-import com.teammsn.mercaditotecmobile.LogIn;
-import com.teammsn.mercaditotecmobile.MainActivity;
 import com.teammsn.mercaditotecmobile.R;
+import com.teammsn.services.MyServices;
 
-public class MyProducts extends AppCompatActivity {
+public class EditProduct extends AppCompatActivity {
 
     /**
      * Se crean las variables globales de la clase.
      *
-     * @param home:
-     * @param add:
+     * @param passicon:
+     * @param backArrow:
      */
 
-    ImageView home;
-    ImageButton add;
+    ImageView backArrow;
+    ImageButton passicon;
 
     /**
      * Metodo que se encarga de inicializar la actividad de la vista.
@@ -32,25 +32,25 @@ public class MyProducts extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_products);
+        setContentView(R.layout.activity_edit_product);
 
         // Se inicializan las variables con los valores correspondientes a su ID en la vista.
-        home = (ImageView) findViewById(R.id.home);
-        add = (ImageButton) findViewById(R.id.add);
+        backArrow = (ImageView) findViewById(R.id.backios);
+        passicon = (ImageButton) findViewById(R.id.passicon);
 
         // Se asigna la funcionalidad al icono.
-        home.setOnClickListener(new View.OnClickListener() {
+        backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MyServices.class));
             }
         });
 
-        // Se asigna la funcionalidad al icono.
-        add.setOnClickListener(new View.OnClickListener() {
+        // Se asigna la funcionalidad al icono de informacion de las fotos.
+        passicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), AddProduct.class));
+                Toast.makeText(EditProduct.this, "Máximo 5 fotos.", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -35,4 +35,14 @@
     <string name="cancelar">Cancelar</string>
     <string name="mensaje_eliminar">¿Está seguro(a) que desea eliminar su cuenta?</string>
     <string name="aceptar">Aceptar</string>
+    <string name="mis_servicios">Mis servicios a la venta</string>
+    <string name="agregar_servicio">Agregar Servicio</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="categor_a">Categoría</string>
+    <string name="precio">Precio</string>
+    <string name="fotos">Fotos</string>
+    <string name="agregar">Agregar</string>
+    <string name="mis_productos">Mis Productos a la Venta</string>
+    <string name="agregar_producto">Agregar Producto</string>
+    <string name="editar_producto">Editar Producto</string>
 </resources>
