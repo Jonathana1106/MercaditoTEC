@@ -43,7 +43,7 @@ public class AddProduct extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MyServices.class));
+                startActivity(new Intent(getApplicationContext(), MyProducts.class));
             }
         });
 

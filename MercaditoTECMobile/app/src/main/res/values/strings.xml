@@ -45,4 +45,6 @@
     <string name="mis_productos">Mis Productos a la Venta</string>
     <string name="agregar_producto">Agregar Producto</string>
     <string name="editar_producto">Editar Producto</string>
+    <string name="lugares_de_entrega">Lugares de entrega</string>
+    <string name="opciones_de_pago">Opciones de pago</string>
 </resources>

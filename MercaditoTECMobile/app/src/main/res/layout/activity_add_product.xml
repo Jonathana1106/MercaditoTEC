@@ -26,8 +26,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
         android:text="@string/nombre"
         android:textColor="@color/forest_green3"
         android:textSize="20sp"
@@ -41,8 +41,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
         android:text="@string/descripci_n"
         android:textColor="@color/forest_green3"
         android:textSize="20sp" />
@@ -55,25 +55,27 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
         android:text="@string/categor_a"
         android:textColor="@color/forest_green3"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/placest"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/categoryt"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:text="Lugares de entrega"
+        android:textAlignment="viewEnd"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/lugares_de_entrega"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:gravity="end" />
 
     <TextView
         android:id="@+id/pricet"
@@ -83,25 +85,27 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
         android:text="@string/precio"
         android:textColor="@color/forest_green3"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/paymentt"
-        android:layout_width="85dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pricet"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:textAlignment="viewEnd"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:text="Opciones de pago"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/opciones_de_pago"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:gravity="end" />
 
     <TextView
         android:id="@+id/photost"
@@ -111,8 +115,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
         android:text="@string/fotos"
         android:textColor="@color/forest_green3"
         android:textSize="20sp" />
