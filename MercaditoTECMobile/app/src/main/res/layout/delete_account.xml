@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
         android:text="@string/mensaje_eliminar"
         android:textColor="@color/forest_green3"
         android:textSize="18sp" />
@@ -48,13 +48,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:background="@color/forest_greenA"
         android:gravity="center"
         android:padding="5dp"
         android:text="@string/cancelar"
-        android:textColor="@color/lime_green"
-        android:layout_marginEnd="5dp" />
+        android:textColor="@color/lime_green" />
 
 </RelativeLayout>

@@ -122,19 +122,20 @@
                 android:contentDescription="@string/x"
                 android:src="@drawable/passicon"
                 tools:targetApi="lollipop" />
+
             <CheckBox
                 android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/atc"
-                android:layout_marginTop="10dp"
-                android:buttonTint="@color/forest_green3"
-                android:textColor="@color/teal_green"
-                android:layout_marginLeft="25dp"
-                android:textColorLink="@color/lime_green"
                 android:layout_gravity="center"
-                android:textSize="17sp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="25dp"
+                android:buttonTint="@color/forest_green3"
+                android:text="@string/atc"
+                android:textColor="@color/teal_green"
+                android:textColorLink="@color/lime_green"
+                android:textSize="17sp"
                 tools:targetApi="lollipop" />
 
             <Button
