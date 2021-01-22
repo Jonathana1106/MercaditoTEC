@@ -26,4 +26,13 @@
     <string name="ingresar">Ingresar</string>
     <string name="mercaditotec">MercaditoTEC</string>
     <string name="x">X</string>
+    <string name="atc">Acepto Términos y Condiciones</string>
+    <string name="info_personal">Información Personal</string>
+    <string name="correo">Correo</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
+    <string name="editar_info">Editar información</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="mensaje_eliminar">¿Está seguro(a) que desea eliminar su cuenta?</string>
+    <string name="aceptar">Aceptar</string>
 </resources>

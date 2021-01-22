@@ -1,41 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.teammsn.me.Profile">
-
-    <include layout="@layout/toolbar_general" />
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:background="#99D578">
 
     <TextView
-        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/info_personal"
-        android:textColor="@color/forest_green3"
-        android:textSize="25sp"
-        tools:ignore="RelativeOverlap" />
-
-    <ImageButton
-        android:id="@+id/edit"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/x"
-        android:foregroundGravity=""
-        android:onClick="editProfile"
-        android:scaleType="fitCenter"
-        android:src="@drawable/edit"
-        tools:targetApi="lollipop" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/editar_info"
+        android:textColor="@color/green0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/namet"
@@ -43,11 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         android:text="@string/nombre"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp"
-        tools:ignore="RelativeOverlap" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/lastnamet"
@@ -59,7 +36,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/apellidos"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/emailt"
@@ -71,7 +48,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/correo"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/carnett"
@@ -83,7 +60,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/carnet"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/phonet"
@@ -95,21 +72,40 @@
         android:layout_marginTop="10dp"
         android:text="@string/tel_fono"
         android:textColor="@color/forest_green3"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
+
 
     <TextView
-        android:id="@+id/delete"
+        android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="400dp"
-        android:linksClickable="true"
-        android:onClick="deleteAccount"
-        android:text="@string/eliminar_cuenta"
-        android:textColor="@color/forest_green3"
-        android:textColorLink="@color/lime_green"
-        android:textSize="20sp"
-        tools:ignore="RelativeOverlap" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="5dp"
+        android:padding="5dp"
+        android:background="@color/forest_greenA"
+        android:gravity="center"
+        android:text="@string/guardar"
+        android:textColor="@color/lime_green" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:background="@color/forest_greenA"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/cancelar"
+        android:textColor="@color/lime_green"
+        android:layout_marginEnd="5dp" />
+
 
 </RelativeLayout>

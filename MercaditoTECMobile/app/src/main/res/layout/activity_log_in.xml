@@ -55,7 +55,8 @@
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/forest_greenA"
         android:text="@string/ingresar"
-        android:textColor="@color/lime_green" />
+        android:textColor="@color/lime_green"
+        tools:targetApi="lollipop" />
 
     <TextView
         android:id="@+id/btnsignup"

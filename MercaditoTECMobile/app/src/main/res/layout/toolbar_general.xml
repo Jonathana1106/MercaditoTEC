@@ -16,29 +16,7 @@
         tools:ignore="RelativeOverlap" />
 
     <ImageView
-        android:id="@+id/chat"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_toStartOf="@+id/account"
-        android:layout_toLeftOf="@+id/account"
-        android:contentDescription="@string/x"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:src="@drawable/ic_baseline_chat_24" />
-
-    <ImageView
-        android:id="@+id/account"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_toStartOf="@+id/exit"
-        android:layout_toLeftOf="@+id/exit"
-        android:contentDescription="@string/x"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:src="@drawable/ic_baseline_account_circle_24" />
-
-    <ImageView
-        android:id="@+id/exit"
+        android:id="@+id/home"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
@@ -46,6 +24,6 @@
         android:contentDescription="@string/x"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:src="@drawable/ic_baseline_exit_to_app_24" />
+        android:src="@drawable/ic_baseline_home_24" />
 
 </RelativeLayout>

@@ -25,7 +25,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
                 android:contentDescription="@string/x"
                 android:src="@drawable/mercaditotec" />
 
@@ -34,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginRight="25dp"
                 android:autofillHints=""
                 android:gravity="center_horizontal"
@@ -81,7 +80,7 @@
                 android:autofillHints=""
                 android:gravity="center_horizontal"
                 android:hint="@string/carnet"
-                android:inputType="text"
+                android:inputType="number"
                 android:textAlignment="center"
                 android:textColorHint="@color/teal_green" />
 
@@ -121,7 +120,22 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/white"
                 android:contentDescription="@string/x"
-                android:src="@drawable/passicon" />
+                android:src="@drawable/passicon"
+                tools:targetApi="lollipop" />
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/atc"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/forest_green3"
+                android:textColor="@color/teal_green"
+                android:layout_marginLeft="25dp"
+                android:textColorLink="@color/lime_green"
+                android:layout_gravity="center"
+                android:textSize="17sp"
+                android:layout_marginRight="25dp"
+                tools:targetApi="lollipop" />
 
             <Button
                 android:id="@+id/btnsignup"

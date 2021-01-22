@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -36,6 +37,7 @@ public class SignUp extends AppCompatActivity {
      * @param signup:
      * @param passicon:
      * @param backArrow:
+     * @param checkbox:
      * @param firebaseAuth:
      */
 
@@ -43,6 +45,7 @@ public class SignUp extends AppCompatActivity {
     Button signup;
     ImageView backArrow;
     ImageButton passicon;
+    CheckBox checkBox;
     FirebaseAuth firebaseAuth;
 
     /**
@@ -65,6 +68,7 @@ public class SignUp extends AppCompatActivity {
         signup = (Button) findViewById(R.id.btnsignup);
         backArrow = (ImageView) findViewById(R.id.backios);
         passicon = (ImageButton) findViewById(R.id.passicon);
+        checkBox = (CheckBox) findViewById(R.id.checkbox);
         firebaseAuth = FirebaseAuth.getInstance();
 
         // Se comprueba si existe un usuario que haya iniciado sesion.
@@ -131,6 +135,14 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(SignUp.this, "La contraseña debe ser la utilidaza en DATIC.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Se asigna la funcionalidad al checkbox.
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SignUp.this, "Usted ha aceptado.", Toast.LENGTH_SHORT).show();
             }
         });
     }
