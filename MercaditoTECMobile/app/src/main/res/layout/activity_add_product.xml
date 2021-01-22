@@ -122,12 +122,25 @@
         android:textSize="20sp" />
 
     <ImageButton
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymentt"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/x"
+        android:src="@drawable/upload"
+        tools:targetApi="lollipop" />
+
+    <ImageButton
         android:id="@+id/passicon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/photost"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/white"
         android:contentDescription="@string/x"
         android:src="@drawable/passicon"
