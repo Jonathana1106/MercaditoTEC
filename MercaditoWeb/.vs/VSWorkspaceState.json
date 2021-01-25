@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\Components",
+    "\\src\\app\\Components\\Authentication",
+    "\\src\\app\\Components\\home",
+    "\\src\\app\\Components\\OfertasLaborales",
+    "\\src\\app\\Components\\sharedComponents",
+    "\\src\\app\\Components\\sharedComponents\\nav",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\auth"
+  ],
+  "SelectedNode": "\\src\\app\\Components\\OfertasLaborales\\ofertas.component.html",
+  "PreviewInSolutionExplorer": false
+}
