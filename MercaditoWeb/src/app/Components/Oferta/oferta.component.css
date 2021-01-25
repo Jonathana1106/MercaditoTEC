@@ -1,15 +1,27 @@
-.banner {
-  width: 80%;
-  height: 80%;
-  top: 30px;
-  left: 130px;
+
+.Info p{
+  font-size: 20px;
+  line-height:25px;
+  top: 350px;
+  left: 75px;
   position: absolute;
 }
 
-.Buscador {
-  width: 80%;
-  height: 80%;
+.rect {
   top: 50px;
-  left: 1000px;
+  left: 450px;
   position: absolute;
 }
+.foto {
+  top: 50px;
+  left: 50px;
+  position: absolute;
+}
+
+.Aplica {
+  top: 450px;
+  left: 100px;
+  position: absolute;
+}
+
+
