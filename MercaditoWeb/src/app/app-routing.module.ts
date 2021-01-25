@@ -5,6 +5,7 @@ import { SignInComponent} from 'src/app/Components/Authentication/sign-in/sign-i
 import { HomeComponent } from 'src/app/Components/home/home.component';
 import { OfertasComponent } from './Components/OfertasLaborales/ofertas.component';
 import { OfertaComponent } from './Components/Oferta/oferta.component';
+import { DashboardComponent } from './Components/Dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'signIn', component:SignInComponent},
   {path:'home', component:HomeComponent},
   { path: 'ofertas', component: OfertasComponent },
-  { path: 'oferta', component: OfertaComponent }
+  { path: 'oferta', component: OfertaComponent },
+  {path:'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({

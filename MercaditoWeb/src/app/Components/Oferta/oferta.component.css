@@ -18,6 +18,27 @@
   position: absolute;
 }
 
+.Descripción {
+  top: 100px;
+  left: 500px;
+  position: absolute;
+}
+
+.Requisitos {
+  top: 300px;
+  left: 500px;
+  position: absolute;
+}
+.Base {
+  top: 200px;
+  left: 500px;
+  position: absolute;
+}
+.Responsabilidades {
+  top: 400px;
+  left: 500px;
+  position: absolute;
+}
 .Aplica {
   top: 450px;
   left: 100px;

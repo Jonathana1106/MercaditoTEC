@@ -5,17 +5,15 @@ import { CurrentUserService } from 'src/app/services/auth/currentUser/current-us
 
 
 @Component({
-  selector: 'app-Ofertas',
-  templateUrl: './oferta.component.html',
-  styleUrls: ['./oferta.component.css']
+  selector: 'app-Dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class OfertaComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   
 
   ngOnInit(): void {
-
-    
   }
 
 
