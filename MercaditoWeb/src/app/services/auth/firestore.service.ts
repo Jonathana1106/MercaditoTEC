@@ -18,5 +18,13 @@ export class FirestoreService {
   getStudents(){
     return this.students;
   }
+
+  updateStudent(recordID,record){
+    this.afs.doc('Estudiantes/' + recordID).update(record);
+  }
+
+  deleteStudent(record_id) {
+    this.afs.doc('Estudiantes/' + record_id).delete();
+  }
 }
 

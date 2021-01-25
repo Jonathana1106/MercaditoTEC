@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Estudiantes } from 'src/app/models/users/student';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
   students:Estudiantes[];
-
+  /* jsonAnswer:Estudiantes[];
+   userData = new BehaviorSubject(this.user); 
+ */
   constructor(private http: HttpClient) { }
   getStudents(): Observable<Estudiantes[]> {
     return this.http.get<Estudiantes[]>('https://localhost:44391/estudiante');
@@ -31,6 +33,24 @@ export class StudentService {
       });
   }
 
+
+  /* Obtener id del estudiante */
+  /* getStudentId(){
+    var studentObject = JSON.parse(JSON.stringify(this.jsonAnswer));
+    var checking= studentObject.map(e=> e.IDEstudiante);
+    localStorage.setItem('userId', checking);
+    alert(localStorage.getItem('userId'));
+  }
+
+  set user(value:string) {
+    this.userData.next(value); // this will make sure to tell every subscriber about the change.
+    localStorage.setItem('userId', value);
+  }
+ 
+  get user() {
+    return localStorage.getItem('userId');
+  } */
+  
 
   delete(id) {
 

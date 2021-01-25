@@ -20,6 +20,11 @@ import { SignInComponent } from './Components/Authentication/sign-in/sign-in.com
 import { StudentService } from 'src/app/services/users/student.service';
 import { AdminService } from 'src/app/services/users/admin.service';
 import { EmployerService } from 'src/app/services/users/employer.service';
+import { StudentPComponent } from './Components/StudentComponents/profile/student-p/student-p.component';
+import { EmployerPComponent } from './Components/EmployerComponents/profile/employer-p/employer-p.component';
+import { AdminPComponent } from './Components/AdminComponents/profile/admin-p/admin-p.component';
+
+
 
 
 @NgModule({
@@ -29,6 +34,10 @@ import { EmployerService } from 'src/app/services/users/employer.service';
     SignUpComponent,
     NavComponent,
     SignInComponent,
+    StudentPComponent,
+    EmployerPComponent,
+    AdminPComponent,
+
 
   ],
   imports: [

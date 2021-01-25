@@ -22,7 +22,7 @@
           <!-- Employer -->
           <div *ngIf="userLogged=='Employer'">
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Empleador</a>
+              <a class="nav-link active" routerLink="/eProfile" tabindex="-1" >Perfil</a>
             </li>
           </div>
 
@@ -31,7 +31,7 @@
           <!-- Student -->
           <div *ngIf="userLogged=='Student'">
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Estudiante</a>
+              <a class="nav-link active" routerLink="/sProfile" tabindex="-1" >Perfil</a>
             </li>
           </div>
 
@@ -41,7 +41,7 @@
           <!-- Admin -->
           <div *ngIf="userLogged=='Admin'">
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+              <a class="nav-link active" routerLink="/aProfile" tabindex="-1" >Perfil</a>
             </li>
           </div>
         </ul>

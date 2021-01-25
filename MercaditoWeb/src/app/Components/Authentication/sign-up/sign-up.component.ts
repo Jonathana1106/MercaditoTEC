@@ -100,7 +100,8 @@ export class SignUpComponent implements OnInit {
   createStudent(){
     var email= ((<HTMLInputElement>document.getElementById("studentEmail")).value);
     var studentCard= parseFloat((<HTMLInputElement>document.getElementById("studentCard")).value);
-    this.studentService.sendData(studentCard,this.name,this.lastName,0,this.cel,'',email); 
+    var hola=this.studentService.sendData(studentCard,this.name,this.lastName,0,this.cel,'',email); 
+    //console.log("mamaniiiiiiiiiiiiii    ",hola)
   }
 
   createAdmin(){
@@ -116,6 +117,7 @@ export class SignUpComponent implements OnInit {
     var companyEmail=((<HTMLInputElement>document.getElementById("companyEmail")).value);
     var companyNumber= parseFloat((<HTMLInputElement>document.getElementById("companyNumber")).value);
     this.employerService.sendData(companyNumber,this.name,this.lastName,company,this.cel,id,email, companyEmail);
+   
 
   }
 

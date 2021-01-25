@@ -18,4 +18,12 @@ export class EmployerFirestoreService {
   getEmployers(){
     return this.employers;
   }
+
+  updateEmployers(recordID,record){
+    this.afs.doc('Empleadores/' + recordID).update(record);
+  }
+
+  deleteEmployers(record_id) {
+    this.afs.doc('Empleadores/' + record_id).delete();
+  }
 }

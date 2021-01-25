@@ -18,4 +18,12 @@ export class AdminFirestoreService {
   getAdmins(){
     return this.admins;
   }
+
+  updateAdmins(recordID,record){
+    this.afs.doc('Administradores/' + recordID).update(record);
+  }
+
+  deleteAdmins(record_id) {
+    this.afs.doc('Administradores/' + record_id).delete();
+  }
 }

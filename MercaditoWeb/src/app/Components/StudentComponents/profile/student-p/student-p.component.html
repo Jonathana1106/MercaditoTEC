@@ -1,0 +1,130 @@
+<div class="container-lg">
+    <h2 class="margin-bottom">Perfil</h2>
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action" (click)="display('data')"  >Información personal</a>
+            <a class="list-group-item list-group-item-action" (click)="display('evaluaciones')">Evaluaciones</a>
+            <h6>Puntos acumulados: </h6>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" *ngIf="personalData" role="tabpanel" aria-labelledby="list-home-list">
+
+                <div class="mb-3 row" >
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Nombre:</label>
+                     <div class="col-sm-10">
+                       <input type="text" readonly class="form-control-plaintext" id="name" value="Juanito">
+                       <input type="hidden" id="dbId" value="mamani">
+                     </div>
+                 </div>  
+                
+                 <div class="mb-3 row" >
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Apellidos:</label>
+                     <div class="col-sm-10">
+                       <input type="text" readonly class="form-control-plaintext" id="lastName" value="Azofeifa Alvarado">
+                     </div>
+                 </div> 
+
+                <div class="mb-3 row" >
+                   <label for="staticEmail" class="col-sm-2 col-form-label">Correo institucional:</label>
+                    <div class="col-sm-10">
+                      <input type="email" readonly class="form-control-plaintext marginText-top" id="email" value="email@example.com">
+                    </div>
+                </div> 
+
+                <div class="mb-3 row" >
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Carnet:</label>
+                     <div class="col-sm-10">
+                       <input type="number" readonly class="form-control-plaintext" id="id" value="117640798">
+                     </div>
+                 </div> 
+
+                 <div class="mb-3 row" >
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Celular:</label>
+                     <div class="col-sm-10">
+                       <input type="number" readonly class="form-control-plaintext" id="cel" value="60184141">
+                     </div>
+                 </div> 
+
+                 <div class="mb-3 row" >
+                    <button type="button"  class="btn btn-success" data-toggle="modal" data-target="#modify">Modificar Información</button>
+                    <button type="button" class="btn btn-success margin-left">Cerrar cuenta</button>
+
+                 </div> 
+
+
+
+
+            </div>
+            <div class="tab-pane fade" id="list-config" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+         
+        </div>
+      </div>
+</div>
+
+
+<!-- Modal para editar información personal-->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modificar información personal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="mb-3 row" >
+            <label for="staticEmail" class="col-sm-2 col-form-label">Nombre:</label>
+             <div class="col-sm-10">
+               <input type="text"  class="form-control-plaintext" id="modifiedName" value="Juanito">
+             </div>
+         </div>  
+        
+         <div class="mb-3 row" >
+            <label for="staticEmail" class="col-sm-2 col-form-label">Apellidos:</label>
+             <div class="col-sm-10">
+               <input type="text"  class="form-control-plaintext" id="modifiedLastName" value="Azofeifa Alvarado">
+             </div>
+         </div> 
+
+         
+        <div class="mb-3 row" >
+            <label for="staticEmail" class="col-sm-2 col-form-label">Correo institucional:</label>
+             <div class="col-sm-10">
+               <input type="email"  class="form-control-plaintext marginText-left marginText-top" id="modifiedEmail" value="email@example.com">
+             </div>
+         </div> 
+
+
+        <div class="mb-3 row" >
+            <label for="staticEmail" class="col-sm-2 col-form-label">Carnet:</label>
+             <div class="col-sm-10">
+               <input type="number"  class="form-control-plaintext" id="modifiedId" value="117640798">
+             </div>
+         </div> 
+
+         <div class="mb-3 row" >
+            <label for="staticEmail" class="col-sm-2 col-form-label">Celular:</label>
+             <div class="col-sm-10">
+               <input type="number"  class="form-control-plaintext" id="modifiedCel" value="60184141">
+             </div>
+         </div> 
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-success" id="saveChanges" data-dismiss="modal">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

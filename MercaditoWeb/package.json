@@ -23,7 +23,7 @@
     "@popperjs/core": "^2.6.0",
     "@types/jquery": "^3.5.5",
     "bootstrap": "^4.5.3",
-    "firebase": "^8.2.2",
+    "firebase": "^8.2.4",
     "jquery": "^3.5.1",
     "rxjs": "~6.5.5",
     "rxjs-compat": "^6.6.3",
