@@ -4,14 +4,10 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\Components",
-    "\\src\\app\\Components\\Authentication",
-    "\\src\\app\\Components\\home",
-    "\\src\\app\\Components\\OfertasLaborales",
-    "\\src\\app\\Components\\sharedComponents",
-    "\\src\\app\\Components\\sharedComponents\\nav",
-    "\\src\\app\\services",
-    "\\src\\app\\services\\auth"
+    "\\src\\app\\Components\\Dashboard",
+    "\\src\\app\\Components\\Oferta",
+    "\\src\\app\\Components\\OfertasLaborales"
   ],
-  "SelectedNode": "\\src\\app\\Components\\OfertasLaborales\\ofertas.component.html",
+  "SelectedNode": "\\src\\app\\Components\\OfertasLaborales\\ofertas.component.css",
   "PreviewInSolutionExplorer": false
 }

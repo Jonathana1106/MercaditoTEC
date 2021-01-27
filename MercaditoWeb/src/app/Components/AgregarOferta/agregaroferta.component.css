@@ -1,0 +1,101 @@
+
+.Info p{
+  font-size: 20px;
+  line-height:25px;
+  top: 370px;
+  left: 75px;
+  position: absolute;
+}
+
+.rect {
+  top: 50px;
+  left: 450px;
+  position: absolute;
+}
+.foto {
+  top: 50px;
+  left: 50px;
+  position: absolute;
+}
+
+.Descripción {
+  top: 100px;
+  left: 500px;
+  position: absolute;
+}
+
+.escribirDescripción {
+  height: 80px;
+  top: 110px;
+  left: 750px;
+  position: absolute;
+}
+
+.Requisitos {
+  top: 300px;
+  left: 500px;
+  position: absolute;
+}
+
+.escribirRequisitos {
+  height: 300px;
+  top: 310px;
+  left: 750px;
+  position: absolute;
+}
+
+.Base {
+  top: 200px;
+  left: 500px;
+  position: absolute;
+}
+
+.escribirBase {
+  height: 80px;
+  top: 210px;
+  left: 750px;
+  position: absolute;
+}
+.Responsabilidades {
+  top: 400px;
+  left: 500px;
+  position: absolute;
+}
+
+.escribirResponsabilidades {
+  height: 80px;
+  top: 460px;
+  left: 850px;
+  position: absolute;
+}
+.Enviar {
+  top: 500px;
+  left: 150px;
+  position: absolute;
+}
+.Nombre {
+  height: 80px;
+  top: 360px;
+  left: 220px;
+  position: absolute;
+}
+.Oportunidad {
+  height: 80px;
+  top: 390px;
+  left: 220px;
+  position: absolute;
+}
+.Empresa {
+  height: 80px;
+  top: 420px;
+  left: 220px;
+  position: absolute;
+}
+.Ubicacion {
+  height: 80px;
+  top: 450px;
+  left: 220px;
+  position: absolute;
+}
+
+

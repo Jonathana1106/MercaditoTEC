@@ -6,6 +6,7 @@ import { HomeComponent } from 'src/app/Components/home/home.component';
 import { OfertasComponent } from './Components/OfertasLaborales/ofertas.component';
 
 import { OfertaComponent } from './Components/Oferta/oferta.component';
+import { AgregarOfertaComponent } from './Components/AgregarOferta/agregaroferta.component';
 
 import { DashboardComponent } from './Components/Dashboard/dashboard.component';
 
@@ -17,13 +18,14 @@ import { EmployerPComponent } from './Components/EmployerComponents/profile/empl
 const routes: Routes = [
   {path:'signUp', component:SignUpComponent},
   {path:'signIn', component:SignInComponent},
-  { path: 'ofertas', component: OfertasComponent },
-  { path: 'oferta', component: OfertaComponent },
+  {path: 'ofertas', component: OfertasComponent },
+  {path: 'oferta', component: OfertaComponent },
   {path:'dashboard', component: DashboardComponent},
   {path:'home', component:HomeComponent},
   {path:'sProfile', component:StudentPComponent},
   {path:'aProfile', component:AdminPComponent},
-  {path:'eProfile', component:EmployerPComponent}
+  { path: 'eProfile', component: EmployerPComponent },
+  {path: 'agregaroferta',component: AgregarOfertaComponent}
 ];
 
 @NgModule({
