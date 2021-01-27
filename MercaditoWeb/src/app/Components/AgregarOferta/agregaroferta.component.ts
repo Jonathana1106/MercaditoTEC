@@ -15,7 +15,6 @@ export class AgregarOfertaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
   }
 
 
