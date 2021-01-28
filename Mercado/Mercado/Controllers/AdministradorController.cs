@@ -23,6 +23,7 @@ namespace Mercado.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Administrador>>> Getadministrador()
         {
+            // Veamos que pasa si agrego un comentario
             return await context.Administrador.ToListAsync();
         }
 
