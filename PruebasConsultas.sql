@@ -6,6 +6,7 @@ VALUES
 SELECT * FROM Administrador;
 
 DELETE FROM Administrador WHERE Administrador.Nombre = 'Andrey';
+DELETE FROM Administrador WHERE Administrador.Nombre = 'Jonathan';
 
 DROP TABLE Administrador;
 DROP TABLE Categoria;
