@@ -21,7 +21,6 @@ export class AgregarOfertaComponent implements OnInit {
     $(document).ready(function () {
       $("#enviar").click(function () {
         var descripcion = $("#escribirDescripcion").val();
-        alert(descripcion);
         var base = $("#base").val();
         var requisitos = $("#requisitos").val();
         var descripcionr = $("#descripcionr").val();

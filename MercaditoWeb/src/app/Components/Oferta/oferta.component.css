@@ -7,6 +7,27 @@
   position: absolute;
 }
 
+.eNombre {
+  top: 350px;
+  left: 210px;
+  position: absolute;
+}
+.eOportunidad {
+  top: 378px;
+  left: 210px;
+  position: absolute;
+}
+.eEmpresa {
+  top: 403px;
+  left: 210px;
+  position: absolute;
+}
+.eUbicacion {
+  top: 427px;
+  left: 210px;
+  position: absolute;
+}
+
 .rect {
   top: 50px;
   left: 450px;
@@ -40,8 +61,35 @@
   position: absolute;
 }
 .Aplica {
-  top: 450px;
-  left: 100px;
+  top: 480px;
+  left: 160px;
+  position: absolute;
+}
+.eDescripcion {
+    font-size: 30px;
+  top: 105px;
+  left: 800px;
+  position: absolute;
+}
+
+.eBase {
+  font-size: 30px;
+  top: 205px;
+  left: 800px;
+  position: absolute;
+}
+
+.eRequisitos {
+  font-size: 30px;
+  top: 305px;
+  left: 800px;
+  position: absolute;
+}
+
+.eResponsabilidades {
+  font-size: 30px;
+  top: 453px;
+  left: 900px;
   position: absolute;
 }
 
