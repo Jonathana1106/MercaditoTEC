@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">MercaditoTEC</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Strings usados en la app para nombrar entradas y vistas de texto -->
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="tel_fono">Teléfono</string>
+    <string name="carnet">Carnet</string>
+    <string name="correo_institucional">Correo institucional</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="crear_una_cuenta">Crear una cuenta</string>
+    <string name="productos">Productos</string>
+    <string name="servicios">Servicios</string>
+    <string name="comprar">Comprar</string>
+    <string name="vender">Vender</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="mercaditotec">MercaditoTEC</string>
+    <string name="x">X</string>
+    <string name="atc">Acepto Términos y Condiciones</string>
+    <string name="info_personal">Información Personal</string>
+    <string name="correo">Correo</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
+    <string name="editar_info">Editar información</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="mensaje_eliminar">¿Está seguro(a) que desea eliminar su cuenta?</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="mis_servicios">Mis servicios a la venta</string>
+    <string name="agregar_servicio">Agregar Servicio</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="categor_a">Categoría</string>
+    <string name="precio">Precio</string>
+    <string name="fotos">Fotos</string>
+    <string name="agregar">Agregar</string>
+    <string name="mis_productos">Mis Productos a la Venta</string>
+    <string name="agregar_producto">Agregar Producto</string>
+    <string name="editar_producto">Editar Producto</string>
+    <string name="lugares_de_entrega">Lugares de entrega</string>
+    <string name="opciones_de_pago">Opciones de pago</string>
+</resources>

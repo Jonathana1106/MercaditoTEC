@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teammsn.mercaditotecmobile">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MercaditoTECMobile">
+        <activity android:name=".Pruebas"></activity>
+        <activity android:name="com.teammsn.services.Service" />
+        <activity android:name="com.teammsn.products.EditProduct" />
+        <activity android:name="com.teammsn.products.AddProduct" />
+        <activity android:name="com.teammsn.services.AddService" />
+        <activity android:name="com.teammsn.products.Product" />
+        <activity android:name="com.teammsn.services.MyServices" />
+        <activity android:name="com.teammsn.products.MyProducts" />
+        <activity android:name="com.teammsn.services.Services" />
+        <activity android:name="com.teammsn.products.Products" />
+        <activity android:name="com.teammsn.me.Profile" />
+        <activity android:name="com.teammsn.me.Chats" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".LogIn">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

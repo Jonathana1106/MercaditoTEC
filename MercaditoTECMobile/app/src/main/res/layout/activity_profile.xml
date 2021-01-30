@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teammsn.me.Profile">
+
+    <include layout="@layout/toolbar_general" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/info_personal"
+        android:textColor="@color/forest_green3"
+        android:textSize="25sp"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageButton
+        android:id="@+id/edit"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/x"
+        android:foregroundGravity=""
+        android:onClick="editProfile"
+        android:scaleType="fitCenter"
+        android:src="@drawable/edit"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/namet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/nombre"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/lastnamet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namet"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/apellidos"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/emailt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastnamet"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/correo"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/carnett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailt"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/carnet"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/phonet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/carnett"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tel_fono"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/star"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/phonet"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/x"
+        android:foregroundGravity=""
+        android:scaleType="fitCenter"
+        android:src="@drawable/stars"
+        tools:targetApi="lollipop" />
+
+    <ImageButton
+        android:id="@+id/money"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/star"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/x"
+        android:foregroundGravity=""
+        android:scaleType="fitCenter"
+        android:src="@drawable/money"
+        tools:targetApi="lollipop" />
+
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:linksClickable="true"
+        android:onClick="deleteAccount"
+        android:text="@string/eliminar_cuenta"
+        android:textColor="@color/forest_green3"
+        android:textColorLink="@color/lime_green"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap" />
+
+</RelativeLayout>

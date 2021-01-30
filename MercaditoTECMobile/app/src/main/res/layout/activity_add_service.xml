@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teammsn.services.AddService">
+
+    <include layout="@layout/toolbar_inside" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/agregar_servicio"
+        android:textColor="@color/forest_green3"
+        android:textSize="25sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/namet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/nombre"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/descriptiont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namet"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/descripci_n"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptiont"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/categor_a"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/pricet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/category"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/precio"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/paymentt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pricet"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:gravity="end"
+        android:text="@string/opciones_de_pago"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/photost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymentt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginRight="250dp"
+        android:text="@string/fotos"
+        android:textColor="@color/forest_green3"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/passicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/x"
+        android:src="@drawable/passicon"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/agregar"
+        android:textColor="@color/lime_green"
+        android:textColorHint="@color/teal_green" />
+
+</RelativeLayout>
