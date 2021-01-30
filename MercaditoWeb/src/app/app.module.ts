@@ -24,6 +24,7 @@ import { StudentPComponent } from './Components/StudentComponents/profile/studen
 import { EmployerPComponent } from './Components/EmployerComponents/profile/employer-p/employer-p.component';
 import { AdminPComponent } from './Components/AdminComponents/profile/admin-p/admin-p.component';
 import { OfertaComponent } from './Components/Oferta/oferta.component';
+import { OfertasComponent } from './Components/OfertasLaborales/ofertas.component';
 import { OfertaService } from './services/users/oferta.service';
 
 
@@ -40,6 +41,7 @@ import { OfertaService } from './services/users/oferta.service';
     EmployerPComponent,
     AdminPComponent,
     OfertaComponent,
+    OfertasComponent,
 
 
   ],
