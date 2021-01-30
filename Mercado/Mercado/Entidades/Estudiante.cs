@@ -17,7 +17,7 @@ namespace Mercado.Entidades
         public int Puntos { get; set; }
         public int Telefono { get; set; }
         public int Carnet { get; set; }
-        public DateTime FechaActividad { get; set; }
+        public string FechaActividad { get; set; }
     }
 }
 
