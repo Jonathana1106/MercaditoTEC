@@ -68,9 +68,26 @@ export class StudentService {
   }
 
 
-  modify(id,carnet,nombre,apellidos,puntos,tel,fechaActividad,correo) {
-    return this.http.put('https://localhost:44391/estudiante/' + id, {Nombre: nombre, Apellidos: apellidos, Correo: correo,Puntos: puntos, Telefono: tel, Carnet: carnet,  
-    FechaActividad: fechaActividad,
+/*   modify( id,carnet,nombre,apellidos,puntos,tel,fechaActividad,correo ) {
+    return this.http.put('https://localhost:44391/estudiante/' + id, {IDEstudiante: id, Nombre: nombre, Apellidos: apellidos, Correo: correo,
+    Puntos: puntos, Telefono: tel, Carnet: carnet, FechaActividad: fechaActividad,
+    }).subscribe(
+      (val) => {
+        console.log("PUT call successful value returned in body",
+          val);
+      },
+      response => {
+        console.log("PUT call in error", response);
+      },
+      () => {
+        console.log("The PUT observable is now completed.");
+      });
+
+  } */
+
+  modify(id,nombre,carnet,correo ,apellidos ,puntos,tel,fechaActividad  ) {
+    return this.http.put('https://localhost:44391/estudiante/' + id, {IDEstudiante: id, Nombre: nombre, Apellidos: apellidos, Correo: correo,
+    Puntos: puntos, Telefono: tel, Carnet: carnet, FechaActividad: fechaActividad,
     }).subscribe(
       (val) => {
         console.log("PUT call successful value returned in body",

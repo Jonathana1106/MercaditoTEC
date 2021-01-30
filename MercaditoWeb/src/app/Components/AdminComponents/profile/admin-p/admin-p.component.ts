@@ -15,6 +15,20 @@ export class AdminPComponent implements OnInit {
   categories=false;
   adminslist:Admin[]=[];
   currentAdmin:Admin;
+  idInput;
+  emailInput;
+  nameInput;
+  lastNameInput;
+  celInput;
+  productPointsInput;
+  servicesPointsInput;
+  colonsEqInput;
+  editCourseInput;
+  deleteCourseInput;
+  addCourseInput;
+  editCategInput;
+  deleteCategInput;
+  addCategInput;
   constructor(public adminService: AdminService) { }
 
   ngOnInit(): void {
