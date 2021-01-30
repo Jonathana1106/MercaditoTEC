@@ -16,9 +16,10 @@ export class CurrentUserService {
    localStorage.setItem('userType', value);
  }
 
+
+
  get user() {
    return localStorage.getItem('userType');
  }
-
 
 }

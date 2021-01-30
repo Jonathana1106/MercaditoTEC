@@ -15,6 +15,11 @@ export class OfertaService {
 
   }
 
+  getOfertaById(id): Observable<Oferta> {
+    return this.http.get<Oferta>('https://localhost:44391/ofertalaboral/'+id);
+
+  }
+
   sendData(opp,descrp,res,emp,req,base,ub, ofer) {
     return this.http.post('https://localhost:44391/ofertalaboral', {
       Oportunidad: opp, DescripcionPuesto: descrp, Responsabilidades: res, Empresa: emp, Requisitos: req, BaseSalarial: parseInt(base),
