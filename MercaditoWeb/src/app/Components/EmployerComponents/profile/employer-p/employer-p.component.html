@@ -1,0 +1,174 @@
+<div class="container-lg">
+  <h2 class="margin-bottom">Perfil</h2>
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action" >Información personal</a>
+        </div>
+      </div>
+
+      <div class="col-8"  *ngIf="personalData" >
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="list-home-list">
+
+              <div class="mb-3 row" >
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Nombre:</label>
+                   <div class="col-sm-10">
+                     <input type="text" readonly class="form-control-plaintext" id="name" [(ngModel)]="nameInput">
+                     <input type="hidden" id="dbId" value="mamani">
+                   </div>
+               </div>  
+              
+               <div class="mb-3 row" >
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Apellidos:</label>
+                   <div class="col-sm-10">
+                     <input type="text" readonly class="form-control-plaintext" id="lastName" [(ngModel)]="lastNameInput">
+                   </div>
+               </div> 
+
+              <div class="mb-3 row" >
+                 <label for="staticEmail" class="col-sm-2 col-form-label">Correo personal:</label>
+                  <div class="col-sm-10">
+                    <input type="email" readonly class="form-control-plaintext marginText-top" id="personalEmail" [(ngModel)]="pEmailInput">
+                  </div>
+              </div> 
+
+
+              <div class="mb-3 row" >
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Cédula:</label>
+                   <div class="col-sm-10">
+                     <input type="number" readonly class="form-control-plaintext" id="id" [(ngModel)]="idInput">
+                   </div>
+               </div> 
+
+               <div class="mb-3 row" >
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Celular:</label>
+                   <div class="col-sm-10">
+                     <input type="number" readonly class="form-control-plaintext" id="cel" [(ngModel)]="celInput">
+                   </div>
+               </div> 
+
+               <div class="mb-3 row" >
+                <label for="staticEmail" class="col-sm-2 col-form-label">Nombre de la empresa:</label>
+                 <div class="col-sm-10">
+                   <input type="text" readonly class="form-control-plaintext marginText-top" id="companyName" [(ngModel)]="companyInput">
+                 </div>
+             </div> 
+
+                               
+              <div class="mb-3 row" >
+                <label for="staticEmail" class="col-sm-2 col-form-label">Correo de la empresa:</label>
+                 <div class="col-sm-10">
+                   <input type="email" readonly class="form-control-plaintext marginText-top" id="companyEmail" [(ngModel)]="cEmailInput">
+                 </div>
+             </div> 
+
+                             
+             <div class="mb-3 row" >
+              <label for="staticEmail" class="col-sm-2 col-form-label">Teléfono de la empresa:</label>
+               <div class="col-sm-10">
+                 <input type="number" readonly class="form-control-plaintext marginText-top" id="companyCel" [(ngModel)]="companyCelInput">
+               </div>
+            </div> 
+
+               <div class="mb-3 row" >
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modify">Modificar Información</button>
+                  <button type="button" class="btn btn-success margin-left">Cerrar cuenta</button>
+
+               </div> 
+
+
+
+
+          </div>
+          <div class="tab-pane fade" id="list-config" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+
+        </div>
+      </div>
+
+
+
+  </div>
+</div>
+
+
+<!-- Modal para editar información personal-->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Modificar información personal</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      
+      <div class="mb-3 row" >
+        <label for="staticEmail" class="col-sm-2 col-form-label">Nombre:</label>
+         <div class="col-sm-10">
+           <input type="text"  class="form-control-plaintext" id="modifiedName" [(ngModel)]="nameInput">
+           <input type="hidden" id="dbId" value="mamani">
+         </div>
+     </div>  
+    
+     <div class="mb-3 row" >
+        <label for="staticEmail" class="col-sm-2 col-form-label">Apellidos:</label>
+         <div class="col-sm-10">
+           <input type="text"  class="form-control-plaintext" id="modifiedLastName" [(ngModel)]="lastNameInput">
+         </div>
+     </div> 
+
+    <div class="mb-3 row" >
+       <label for="staticEmail" class="col-sm-2 col-form-label">Correo personal:</label>
+        <div class="col-sm-10">
+          <input type="email"  class="form-control-plaintext marginText-top " id="modifiedPersonalEmail" [(ngModel)]="pEmailInput">
+        </div>
+    </div> 
+
+
+    <div class="mb-3 row" >
+        <label for="staticEmail" class="col-sm-2 col-form-label">Cédula:</label>
+         <div class="col-sm-10">
+           <input type="number"  class="form-control-plaintext" id="modifiedId" [(ngModel)]="idInput">
+         </div>
+     </div> 
+
+     <div class="mb-3 row" >
+        <label for="staticEmail" class="col-sm-2 col-form-label">Celular:</label>
+         <div class="col-sm-10">
+           <input type="number"  class="form-control-plaintext" id="modifiedCel" [(ngModel)]="celInput">
+         </div>
+     </div> 
+
+     <div class="mb-3 row" >
+      <label for="staticEmail" class="col-sm-2 col-form-label">Nombre de la empresa:</label>
+       <div class="col-sm-10">
+         <input type="text"  class="form-control-plaintext marginText-top" id="modifiedCompanyName" [(ngModel)]="companyInput">
+       </div>
+   </div> 
+
+                     
+    <div class="mb-3 row" >
+      <label for="staticEmail" class="col-sm-2 col-form-label">Correo de la empresa:</label>
+       <div class="col-sm-10">
+         <input type="email"  class="form-control-plaintext marginText-top " id="modifiedCompanyEmail" [(ngModel)]="cEmailInput">
+       </div>
+   </div> 
+
+                   
+   <div class="mb-3 row" >
+    <label for="staticEmail" class="col-sm-2 col-form-label">Teléfono de la empresa:</label>
+     <div class="col-sm-10">
+       <input type="number"  class="form-control-plaintext marginText-top" id="modifiedCompanyCel" [(ngModel)]="companyCelInput">
+     </div>
+  </div> 
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      <button type="submit" class="btn btn-success" id="saveChanges" data-dismiss="modal">Guardar Cambios</button>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,71 @@
+<div class="container-lg" *ngIf="!isSignedIn">
+
+    <div class="row justify-content-md-center">
+    <h1>Bienvenido a MercaditoTec</h1> 
+    </div>
+
+    <h3>Sign In</h3>
+    <div *ngIf="!isSignedIn" class="mb-3 row">
+
+        <label for="formFile" class="col-sm-2 col-form-label">Correo</label>
+        <div class="col-sm-10">
+            <input class="form-control-plaintext" type="email"  #email placeholder="name@example.com"/>
+        </div>
+
+        
+
+
+        <label for="formFile" class="col-sm-2 col-form-label">Usuario</label>
+        <div>
+            <div class="col-sm-10 form-check">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" (click)="studentLogged()" name="flexRadioDefault" id="flexRadioDefault1" value="Estudiante">
+                
+                Estudiante
+                </label>
+            </div>
+
+
+            <div class="col-sm-10 form-check">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" (click)="employerLogged()" name="flexRadioDefault" id="flexRadioDefault2" value="Empleador" >
+                
+                Empleador
+                </label>
+            </div>
+
+            <div class="col-sm-10 form-check">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    <input class="form-check-input" type="radio" (click)="adminLogged()" name="flexRadioDefault" id="flexRadioDefault3" value="Administrador" >
+                
+                Administrador
+                </label>
+            </div>
+
+        </div>
+
+        <div class="w-100"></div>
+
+        <label for="formFileMultiple" class="col-sm-2 col-form-label">Contraseña</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control-plaintext" #password placeholder="Contraseña"/>
+            <button type="submit" class="btn btn-success mb-3" id="signIn"  (click)="onSignin(email.value,password.value)"> Iniciar sesión </button>
+        </div>
+
+
+
+
+    
+
+    </div>
+
+
+
+  
+
+    
+</div>
+<app-home *ngIf="isSignedIn"(isLogout)="handleLogout()"></app-home>
+
+
+ 

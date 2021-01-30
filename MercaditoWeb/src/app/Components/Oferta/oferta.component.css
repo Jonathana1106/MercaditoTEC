@@ -1,0 +1,96 @@
+
+.Info p{
+  font-size: 20px;
+  line-height:25px;
+  top: 350px;
+  left: 75px;
+  position: absolute;
+}
+
+.eNombre {
+  top: 350px;
+  left: 210px;
+  position: absolute;
+}
+.eOportunidad {
+  top: 378px;
+  left: 210px;
+  position: absolute;
+}
+.eEmpresa {
+  top: 403px;
+  left: 210px;
+  position: absolute;
+}
+.eUbicacion {
+  top: 427px;
+  left: 210px;
+  position: absolute;
+}
+
+.rect {
+  top: 50px;
+  left: 450px;
+  position: absolute;
+}
+.foto {
+  top: 50px;
+  left: 50px;
+  position: absolute;
+}
+
+.Descripción {
+  top: 100px;
+  left: 500px;
+  position: absolute;
+}
+
+.Requisitos {
+  top: 300px;
+  left: 500px;
+  position: absolute;
+}
+.Base {
+  top: 200px;
+  left: 500px;
+  position: absolute;
+}
+.Responsabilidades {
+  top: 400px;
+  left: 500px;
+  position: absolute;
+}
+.Aplica {
+  top: 480px;
+  left: 160px;
+  position: absolute;
+}
+.eDescripcion {
+    font-size: 30px;
+  top: 105px;
+  left: 800px;
+  position: absolute;
+}
+
+.eBase {
+  font-size: 30px;
+  top: 205px;
+  left: 800px;
+  position: absolute;
+}
+
+.eRequisitos {
+  font-size: 30px;
+  top: 305px;
+  left: 800px;
+  position: absolute;
+}
+
+.eResponsabilidades {
+  font-size: 30px;
+  top: 453px;
+  left: 900px;
+  position: absolute;
+}
+
+

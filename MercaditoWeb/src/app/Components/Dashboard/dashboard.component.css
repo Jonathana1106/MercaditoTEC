@@ -1,0 +1,31 @@
+.puntos p{
+  font-size: 20px;
+  line-height: 25px;
+  width: 80%;
+  height: 80%;
+  top: 30px;
+  left: 900px;
+  position: absolute;
+}
+
+.conversion p{
+  font-size: 20px;
+  line-height: 25px;
+  width: 80%;
+  height: 80%;
+  top: 60px;
+  left: 900px;
+  position: absolute;
+}
+
+.rect1 {
+  top: 30px;
+  left: 1050px;
+  position: absolute;
+}
+.rect2 {
+  top: 80px;
+  left: 1050px;
+  position: absolute;
+}
+

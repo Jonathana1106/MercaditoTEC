@@ -1,0 +1,26 @@
+.banner {
+  width: 80%;
+  height: 80%;
+  top: 30px;
+  left: 130px;
+  position: absolute;
+}
+
+.Buscador {
+  width: 80%;
+  height: 80%;
+  top: 50px;
+  left: 1000px;
+  position: absolute;
+}
+
+.Agregar {
+  top: 53px;
+  left: 850px;
+  position: absolute;
+}
+
+.table {
+  top: 100px;
+  position: absolute;
+}

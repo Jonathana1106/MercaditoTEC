@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="ofertas.component.css" />
+<body>
+  <div class="banner">
+    <div class="app-text">
+      <h1>Ofertas Laborales </h1>
+    </div>
+  </div>
+  <div class="Buscador">
+    <p>
+      <!----<label>Text box</label>-->
+      <input type="text"
+             id="Buscar"
+             value="Buscar" />
+    </p>
+  </div>
+  <div class="Agregar">
+    <button  class="btn btn-success" id="agregar" onClick="window.open('http://localhost:4200/agregaroferta', '_self').close">Agregar</button>
+
+  </div>
+
+  <div id="content" #content>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Oportunidad</th>
+          <th scope="col">Empresa</th>
+          <th scope="col">Ubicacion</th>
+          <th scope="col">Base Salarial</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let item of ofertaList">
+          <td>{{ item.idOferta }}</td>
+          <td>{{ item.oportunidad }}</td>
+          <td>{{ item.empresa }}</td>
+          <td>{{ item.ubicacion }}</td>
+          <td>{{ item.baseSalarial }}</td>
+
+          <td>
+            <a data-toggle="modal" id="ir" href="#" data-target="#delete" class="ir">Ir</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ir</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger" role="alert">
+            ¿Está seguro?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="irr" data-dismiss="modal" onClick="window.open('http://localhost:4200/oferta', '_self').close">Ir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
