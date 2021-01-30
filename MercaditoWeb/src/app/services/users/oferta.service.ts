@@ -9,14 +9,15 @@ import { Oferta } from 'src/app/models/users/oferta';
 export class OfertaService {
   oferta:Oferta[];
 
+
   constructor(private http: HttpClient) { }
   getOferta(): Observable<Oferta[]> {
     return this.http.get<Oferta[]>('https://localhost:44391/ofertalaboral');
 
   }
 
-  getOfertaById(id): Observable<Oferta> {
-    return this.http.get<Oferta>('https://localhost:44391/ofertalaboral/'+id);
+  getOfertaById(id): Observable<Oferta[]> {
+    return this.http.get<Oferta[]>('https://localhost:44391/ofertalaboral/'+id);
 
   }
 

@@ -19,22 +19,24 @@ export class OfertaComponent implements OnInit {
       this.prueba = nextValue;
     })
   }
-  oferta:Oferta
+  oferta:Oferta[]=[]
   
   ngOnInit(): void {
     var init = this.oferta;
     var init2 = this.ofertaService
+
     var num = this.prueba
     alert(this.prueba)
     init = init2.getOfertaById(parseInt(num));
-    document.getElementById("eDescripcion").innerHTML = init.DescripcionPuesto;
-    document.getElementById("eBase").innerHTML = "";
-    document.getElementById("eRequisitos").innerHTML = init.Requisitos;
-    document.getElementById("eResponsabilidades").innerHTML = init.Responsabilidades;
+    alert(init[0].DescripcionPuesto);
+    document.getElementById("eDescripcion").innerHTML = init[0].DescripcionPuesto;
+    document.getElementById("eBase").innerHTML = "h";
+    document.getElementById("eRequisitos").innerHTML = init[0].Requisitos;
+    document.getElementById("eResponsabilidades").innerHTML = init[0].Responsabilidades;
     document.getElementById("eNombre").innerHTML = "";
-    document.getElementById("eOportunidad").innerHTML = init.Oportunidad;
-    document.getElementById("eEmpresa").innerHTML = init.Empresa;
-    document.getElementById("eUbicacion").innerHTML = init.Ubicacion;
+    document.getElementById("eOportunidad").innerHTML = init[0].Oportunidad;
+    document.getElementById("eEmpresa").innerHTML = init[0].Empresa;
+    document.getElementById("eUbicacion").innerHTML = init[0].Ubicacion;
     $(document).ready(function () {
       $("#enviar").click(function () {
         
