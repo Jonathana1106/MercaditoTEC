@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {AngularFireModule} from '@angular/fire'; 
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
- 
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import {FirebaseService  } from './services/Auth/firebase.service';
 import {FirestoreService} from './services/auth/firestore.service';
@@ -27,6 +27,7 @@ import { OfertaComponent } from './Components/Oferta/oferta.component';
 import { OfertasComponent } from './Components/OfertasLaborales/ofertas.component';
 import { OfertaService } from './services/users/oferta.service';
 import { DataService } from 'src/app/services/auth/currentUser/data.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -58,7 +59,9 @@ import { DataService } from 'src/app/services/auth/currentUser/data.service';
       messagingSenderId: "563135988942",
       appId: "1:563135988942:web:fa0ad9720c5955c81bfc9f"
     }),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [FirebaseService, FirestoreService, AdminFirebaseService,DataService, AdminService, EmployerService, AdminFirestoreService, EmployerFirebaseService, EmployerFirestoreService, StudentService, OfertaService],
   bootstrap: [AppComponent]

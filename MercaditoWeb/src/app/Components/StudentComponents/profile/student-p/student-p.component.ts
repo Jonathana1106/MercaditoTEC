@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from 'src/app/services/users/student.service';
 import { Estudiantes } from 'src/app/models/users/student';
 import { CurrentUserService } from 'src/app/services/Auth/currentUser/current-user.service';
-import {DataService} from 'src/app/services/auth/currentUser/data.service'
+import {DataService} from 'src/app/services/auth/currentUser/data.service';
 
 @Component({
   selector: 'app-student-p',
@@ -53,8 +53,9 @@ export class StudentPComponent implements OnInit {
   }
 
   sendChanges(){
-/*     this.studentService.modify(this.userId,this.idInput,this.nameInput,this.lastNameInput,this.pointsInput,this.celInput,this.dateActivity,this.emailInput);*/
-  this.studentService.modify(1,25,'this.nameInput','this.lastNameInput',0,658,'this.dateActivity','this.emailInput');
+  //this.studentService.modify(this.userId,this.idInput,this.nameInput,this.lastNameInput/*,this.pointsInput,this.celInput,this.dateActivity,this.emailInput */);
+  //this.studentService.modify(1,25021458,'this.nameInput','this.lastNameInput',0,6580000,'this.dateActivity','this.emailInput');
+    this.studentService.modify(this.userId,this.nameInput,this.idInput, this.emailInput, this.lastNameInput, this.pointsInput, this.celInput, this.dateActivity);  
   }
 
 

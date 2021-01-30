@@ -11,6 +11,15 @@ export class EmployerPComponent implements OnInit {
   personalData=true;
   employerslist:Employer[]=[];
   currentStudent:Employer;
+  nameInput;
+  lastNameInput;
+  pEmailInput;
+  idInput;
+  celInput;
+  companyInput;
+  cEmailInput;
+  companyCelInput;
+
   constructor(public employerService: EmployerService) { }
 
   ngOnInit(): void {
