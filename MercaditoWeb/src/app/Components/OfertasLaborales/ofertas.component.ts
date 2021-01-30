@@ -7,7 +7,7 @@ import { OfertaService } from 'src/app/services/users/oferta.service';
 import { of } from 'rxjs';
 import {SharedModule} from 'src/app/shared.module'
 
-
+declare var $: any;
 @Component({
   selector: 'app-OfertasLaborales',
   templateUrl: './ofertas.component.html',
@@ -24,6 +24,13 @@ export class OfertasComponent implements OnInit {
     var init = this.ofertaService;
     this.ofertaService.getOferta().subscribe((ofertas) => {
       this.ofertaList = ofertas;
+    })
+    $(document).ready(function () {
+      $("#irr").click(function () {
+        alert(2);
+        var row = $(this).closest("tr");    // Find the row
+
+      });
     })
 
   }
