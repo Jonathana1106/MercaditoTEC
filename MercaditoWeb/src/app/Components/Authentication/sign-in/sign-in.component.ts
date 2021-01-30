@@ -7,6 +7,7 @@ import {CurrentUserService} from 'src/app/services/auth/currentUser/current-user
 import { StudentService } from 'src/app/services/users/student.service';
 import { AdminService } from 'src/app/services/users/admin.service';
 import { EmployerService } from 'src/app/services/users/employer.service';
+import { DataService } from 'src/app/services/auth/currentUser/data.service';
 
 declare var $:any;
 @Component({
@@ -26,7 +27,7 @@ export class SignInComponent implements OnInit {
   student:boolean;
   
   constructor(public firebaseService : FirebaseService, public userService: CurrentUserService, public studentService: StudentService,
-    public adminService:AdminService, public employerService: EmployerService){}
+    public adminService:AdminService, public employerService: EmployerService, public DataService: DataService){}
   
   ngOnInit(){
     
@@ -117,18 +118,21 @@ export class SignInComponent implements OnInit {
       await this.firebaseService.signin(email,password)
       if(this.firebaseService.isLoggedIn)
       this.isSignedIn=true
+      this.DataService.email = email;
       this.sendMessage()
     }
     if(this.employer && this.validateEmployer(email)){
       await this.firebaseService.signin(email,password)
       if(this.firebaseService.isLoggedIn)
       this.isSignedIn=true
+     this.DataService.email = email;
       this.sendMessage()
     }
     if(this.student && this.validateStudent(email)){
       await this.firebaseService.signin(email,password)
       if(this.firebaseService.isLoggedIn)
       this.isSignedIn=true
+      this.DataService.email = email;
       this.sendMessage()
     }
   }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from 'src/app/services/users/student.service';
 import { Estudiantes } from 'src/app/models/users/student';
-import { FirebaseService } from 'src/app/services/Auth/firebase.service';
+import { CurrentUserService } from 'src/app/services/Auth/currentUser/current-user.service';
+import {DataService} from 'src/app/services/auth/currentUser/data.service'
 
 @Component({
   selector: 'app-student-p',
@@ -13,15 +14,52 @@ export class StudentPComponent implements OnInit {
   assesment=false;
   studentslist:Estudiantes[]=[];
   currentStudent:Estudiantes;
-  constructor(public studentService: StudentService, public firebase : FirebaseService) { }
+  userCurrentEmail:string;
+  userId;
+  idInput;
+  emailInput;
+  nameInput;
+  lastNameInput;
+  celInput;
+  pointsInput;
+  dateActivity;
+  
+  constructor(public studentService: StudentService, public userData: DataService ) {
+    userData.userEmail.subscribe((nextValue) => {
+      this.userCurrentEmail=nextValue;
+   })
+   }
 
   ngOnInit(): void {
     
     this.studentService.getStudents().subscribe((students) => {
-      this.studentslist = students;   })
+      this.studentslist = students;
+      this.getStudentData(this.userCurrentEmail);  })
+    
   }
 
+  getStudentData(email){
+    var studentsObject = JSON.parse(JSON.stringify(this.studentslist));
+    var checking= JSON.parse(JSON.stringify(studentsObject.find(e=> e.correo==email)));
+    console.log(checking);
+    this.idInput=checking.carnet;
+    this.emailInput=checking.correo;
+    this.nameInput=checking.nombre;
+    this.lastNameInput=checking.apellidos;
+    this.celInput=checking.telefono;
+    this.userId=checking.idEstudiante;
+    this.pointsInput=checking.puntos;
+    this.dateActivity=checking.fechaActividad;
+  }
+
+  sendChanges(){
+/*     this.studentService.modify(this.userId,this.idInput,this.nameInput,this.lastNameInput,this.pointsInput,this.celInput,this.dateActivity,this.emailInput);*/
+  this.studentService.modify(1,25,'this.nameInput','this.lastNameInput',0,658,'this.dateActivity','this.emailInput');
+  }
+
+
   display(toShow:string){
+    alert()
     if(toShow=="data"){
       this.personalData=!this.personalData;
       this.assesment=false;
@@ -32,14 +70,12 @@ export class StudentPComponent implements OnInit {
     }  
   }
 
-  getInputValues(){
-    var dbId= ((<HTMLInputElement>document.getElementById("dbId")).value);
-    var name= ((<HTMLInputElement>document.getElementById("modifiedName")).value);
-    var lastname= ((<HTMLInputElement>document.getElementById("modifiedLastname")).value);  
-    var email= parseFloat((<HTMLInputElement>document.getElementById("modifiedEmail")).value);
-    var id= parseFloat((<HTMLInputElement>document.getElementById("modifiedId")).value);
-    var cel= parseFloat((<HTMLInputElement>document.getElementById("modifiedCel")).value);
+  show(){
+    alert(this.userData.email);
   }
+
+
+
 
 
 }

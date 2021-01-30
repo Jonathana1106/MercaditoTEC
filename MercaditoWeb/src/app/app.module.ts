@@ -26,6 +26,7 @@ import { AdminPComponent } from './Components/AdminComponents/profile/admin-p/ad
 import { OfertaComponent } from './Components/Oferta/oferta.component';
 import { OfertasComponent } from './Components/OfertasLaborales/ofertas.component';
 import { OfertaService } from './services/users/oferta.service';
+import { DataService } from 'src/app/services/auth/currentUser/data.service';
 
 
 
@@ -59,7 +60,7 @@ import { OfertaService } from './services/users/oferta.service';
     }),
     AngularFirestoreModule
   ],
-  providers: [FirebaseService, FirestoreService, AdminFirebaseService, AdminService, EmployerService, AdminFirestoreService, EmployerFirebaseService, EmployerFirestoreService, StudentService, OfertaService],
+  providers: [FirebaseService, FirestoreService, AdminFirebaseService,DataService, AdminService, EmployerService, AdminFirestoreService, EmployerFirebaseService, EmployerFirestoreService, StudentService, OfertaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
