@@ -17,7 +17,36 @@
     <button class="button" id="agregar" onClick="window.open('http://localhost:4200/agregaroferta', '_self').close">Agregar</button>
 
   </div>
+
+
+
 </body>
 
-  
+<div id="content" #content>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Oportunidad</th>
+        <th scope="col">Empresa</th>
+        <th scope="col">Ubicacion</th>
+        <th scope="col">Base Salarial</th>
+        <th scope="col">Ir</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of ofertaList">
+        <td>{{ item.Oportunidad }}</td>
+        <td>{{ item.Empresa }}</td>
+        <td>{{ item.Ubicacion }}</td>
+        <td>{{ item.BaseSalarial }}</td>
+
+        <td>
+          <a data-toggle="modal" id="Ir" href="#" data-target="#ir" class="ir">Ir</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 

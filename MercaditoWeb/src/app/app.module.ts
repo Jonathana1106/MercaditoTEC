@@ -23,6 +23,8 @@ import { EmployerService } from 'src/app/services/users/employer.service';
 import { StudentPComponent } from './Components/StudentComponents/profile/student-p/student-p.component';
 import { EmployerPComponent } from './Components/EmployerComponents/profile/employer-p/employer-p.component';
 import { AdminPComponent } from './Components/AdminComponents/profile/admin-p/admin-p.component';
+import { OfertaComponent } from './Components/Oferta/oferta.component';
+import { OfertaService } from './services/users/oferta.service';
 
 
 
@@ -37,6 +39,7 @@ import { AdminPComponent } from './Components/AdminComponents/profile/admin-p/ad
     StudentPComponent,
     EmployerPComponent,
     AdminPComponent,
+    OfertaComponent,
 
 
   ],
@@ -54,7 +57,7 @@ import { AdminPComponent } from './Components/AdminComponents/profile/admin-p/ad
     }),
     AngularFirestoreModule
   ],
-  providers: [FirebaseService, FirestoreService,AdminFirebaseService,AdminService,EmployerService, AdminFirestoreService,EmployerFirebaseService,EmployerFirestoreService,StudentService],
+  providers: [FirebaseService, FirestoreService, AdminFirebaseService, AdminService, EmployerService, AdminFirestoreService, EmployerFirebaseService, EmployerFirestoreService, StudentService, OfertaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
