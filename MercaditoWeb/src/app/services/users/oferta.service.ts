@@ -16,8 +16,8 @@ export class OfertaService {
 
   }
 
-  getOfertaById(id): Observable<Oferta[]> {
-    return this.http.get<Oferta[]>('https://localhost:44391/ofertalaboral/'+id);
+  getOfertaById(id): Observable<Oferta> {
+    return this.http.get<Oferta>('https://localhost:44391/ofertalaboral/'+id);
 
   }
 
