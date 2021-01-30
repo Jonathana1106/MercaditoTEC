@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { EmployerFirebaseService } from './employer-firebase.service';
 
-describe('EmployerFirebaseService', () => {
+/* describe('EmployerFirebaseService', () => {
   let service: EmployerFirebaseService;
 
   beforeEach(() => {
@@ -14,3 +14,4 @@ describe('EmployerFirebaseService', () => {
     expect(service).toBeTruthy();
   });
 });
+ */

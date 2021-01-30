@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { Ofer } from './ofer.service';
 
-describe('Ofer', () => {
+/* describe('Ofer', () => {
   let service: Ofer;
 
   beforeEach(() => {
@@ -14,3 +14,4 @@ describe('Ofer', () => {
     expect(service).toBeTruthy();
   });
 });
+ */

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdminPComponent } from './admin-p.component';
 
-describe('AdminPComponent', () => {
+/* describe('AdminPComponent', () => {
   let component: AdminPComponent;
   let fixture: ComponentFixture<AdminPComponent>;
 
@@ -23,3 +23,4 @@ describe('AdminPComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+ */

@@ -23,7 +23,7 @@ export class OfertaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.oferta= this.ofertaService.getOfertaById(this.prueba);
+    /* this.oferta= this.ofertaService.getOfertaById(this.prueba);
     alert(this.prueba)
     alert(this.oferta.BaseSalarial);
     //document.getElementById("eDescripcion").innerHTML = init.DescripcionPuesto;
@@ -33,7 +33,7 @@ export class OfertaComponent implements OnInit {
     document.getElementById("eNombre").innerHTML = "";
     document.getElementById("eOportunidad").innerHTML = this.oferta.Oportunidad;
     document.getElementById("eEmpresa").innerHTML = this.oferta.Empresa;
-    document.getElementById("eUbicacion").innerHTML = this.oferta.Ubicacion;
+    document.getElementById("eUbicacion").innerHTML = this.oferta.Ubicacion; */
     $(document).ready(function () {
       $("#enviar").click(function () {
         
